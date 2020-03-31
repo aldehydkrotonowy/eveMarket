@@ -1,4 +1,4 @@
-import { url_selector, fetchData } from "./api";
+import { url_selector, fetchData } from "../api/api";
 
 const getTypeIds = async (storeName, inLineKeyPath) => {
   const fetchAndConcatChunks = async (page, idsList) => {
