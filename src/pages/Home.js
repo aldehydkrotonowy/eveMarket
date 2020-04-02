@@ -156,8 +156,14 @@ class Home extends React.Component {
         return "### ###";
       case 7:
         return "# ### ###";
+      case 8:
+        return "## ### ###";
+      case 9:
+        return "### ### ###";
+      case 10:
+        return "# ### ### ###";
       default:
-        return "#######";
+        return "##############";
     }
   };
 

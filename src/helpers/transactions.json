@@ -1,0 +1,40 @@
+[
+  {
+    "transaction": {
+      "transactionId": 1,
+      "buy": [
+        {
+          "buyId": 1,
+          "transactionType": "buy",
+          "time": "2020-04-01 21:31",
+          "unore_Name": "Veldspar",
+          "unore_Qty": 121329,
+          "unore_BuyPrice": 17.04,
+          "unore_UnitVolume": 0.1
+        },
+        {
+          "buyId": 2,
+          "transactionType": "buy",
+          "time": "2020-04-01 21:31",
+          "unore_Name": "Veldspar",
+          "unore_Qty": 200000,
+          "unore_BuyPrice": 18.04,
+          "unore_UnitVolume": 0.1
+        }
+      ],
+      "sell": {
+        "sellId": 1,
+        "transactionType": "sell",
+        "time": "/* 2020-04-01 21:31 */",
+        "finished": false,
+        "brokerFeeRatio": 0.044,
+        "taxRatio": 0.05,
+        "compressionRatio": 100,
+        "core_Name": "Compressed Veldspar",
+        "core_Qty": 0,
+        "core_SellPrice": 0,
+        "core_UnitVolume": 0.15
+      }
+    }
+  }
+]
