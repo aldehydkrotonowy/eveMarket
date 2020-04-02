@@ -1,31 +1,18 @@
 import React from "react";
-
-import Search from "@material-ui/icons/Search";
-// import ViewColumn from "@material-ui/icons/ViewColumn";
-import SaveAlt from "@material-ui/icons/SaveAlt";
-import ChevronLeft from "@material-ui/icons/ChevronLeft";
-import ChevronRight from "@material-ui/icons/ChevronRight";
-import FirstPage from "@material-ui/icons/FirstPage";
-import LastPage from "@material-ui/icons/LastPage";
-// import Add from "@material-ui/icons/Add";
-import Check from "@material-ui/icons/Check";
-import FilterList from "@material-ui/icons/FilterList";
-import Remove from "@material-ui/icons/Remove";
-
-import NumberFormat from "react-number-format";
-import round from "lodash/round";
-import MaterialTable from "material-table";
-import { DENSE_VELDSPAR } from "../helpers/minerals";
-// import MineralSection from "../components/mineralSection/MineralSection";
+// import NumberFormat from "react-number-format";
+// import round from "lodash/round";
+// import MaterialTable, { MTableToolbar } from "material-table";
+import { SCORDITE, DENSE_VELDSPAR, VELDSPAR } from "../helpers/minerals";
+import MineralSection from "../components/home/mineralSection/MineralSection";
 
 class Home extends React.Component {
   state = {
     pricesRangesReady: false,
     numberOfRows: 10,
     taxRate: 5,
-    brokerFeeRatio: 4,
+    brokerFeeRate: 4,
     minerals: {
-      denseVeldspar: {
+      [DENSE_VELDSPAR]: {
         name: DENSE_VELDSPAR,
         priceStep: 0.5,
         pricesRange: [],
@@ -37,9 +24,55 @@ class Home extends React.Component {
           rawminQty: 0,
           rawminTotalCost: 0,
           cminUnitVolume: 0.15,
-          cminVolume: 0.15,
+          cminVolume: 0,
           cminQty: 0,
           cminSellPrice: 2048,
+          grosProfit: 0,
+          brokerFee: 0,
+          tax: 0,
+          netProfit: 0,
+          profit: 0,
+          profitP: 0
+        }
+      },
+      [VELDSPAR]: {
+        name: VELDSPAR,
+        priceStep: 0.5,
+        pricesRange: [],
+        rows: [],
+        rowValues: {
+          rawminUnitVolume: 0.1,
+          shipVolume: 46200,
+          rawminBuyPrice: 10,
+          rawminQty: 0,
+          rawminTotalCost: 0,
+          cminUnitVolume: 0.15,
+          cminVolume: 0,
+          cminQty: 0,
+          cminSellPrice: 2222,
+          grosProfit: 0,
+          brokerFee: 0,
+          tax: 0,
+          netProfit: 0,
+          profit: 0,
+          profitP: 0
+        }
+      },
+      [SCORDITE]: {
+        name: SCORDITE,
+        priceStep: 0.5,
+        pricesRange: [],
+        rows: [],
+        rowValues: {
+          rawminUnitVolume: 0.15,
+          shipVolume: 46200,
+          rawminBuyPrice: 10,
+          rawminQty: 0,
+          rawminTotalCost: 0,
+          cminUnitVolume: 0.19,
+          cminVolume: 0,
+          cminQty: 0,
+          cminSellPrice: 2222,
           grosProfit: 0,
           brokerFee: 0,
           tax: 0,
@@ -97,7 +130,7 @@ class Home extends React.Component {
   };
 
   generateRows = mineralName => {
-    const { minerals, taxRate, brokerFeeRatio } = this.state;
+    const { minerals, taxRate, brokerFeeRate } = this.state;
     const pricesRange = this.generateBuyPriceRagne(mineralName);
     const { rowValues } = minerals[mineralName];
     const {
@@ -108,13 +141,14 @@ class Home extends React.Component {
     } = rowValues;
 
     const rows = pricesRange.map(rawminBuyPrice => {
-      const rawminTotalCost = (shipVolume / rawminUnitVolume) * parseFloat(rawminBuyPrice);
+      const rawminTotalCost =
+        (shipVolume / rawminUnitVolume) * parseFloat(rawminBuyPrice);
       const rawminQty = shipVolume / rawminUnitVolume;
 
       const cminQty = rawminQty / 100;
       const cminVolume = cminQty * cminUnitVolume;
       const grosProfit = cminQty * cminSellPrice;
-      const brokerFee = -(grosProfit * (parseFloat(brokerFeeRatio) / 100));
+      const brokerFee = -(grosProfit * (parseFloat(brokerFeeRate) / 100));
       const tax = -(grosProfit * (parseFloat(taxRate) / 100));
       const netProfit = grosProfit + brokerFee + tax;
       const profit = netProfit - rawminTotalCost;
@@ -198,7 +232,7 @@ class Home extends React.Component {
 
   handleBrokerFeeChane = event => {
     const value = event.target.value;
-    this.setState({ brokerFeeRatio: value });
+    this.setState({ brokerFeeRate: value });
   };
 
   handleTaxChane = event => {
@@ -206,185 +240,10 @@ class Home extends React.Component {
     this.setState({ taxRate: value });
   };
 
-  // ---------------------------------------------------------------------- table props
-  icons = {
-    Check: Check,
-    DetailPanel: ChevronRight,
-    Export: SaveAlt,
-    Filter: FilterList,
-    FirstPage: FirstPage,
-    LastPage: LastPage,
-    NextPage: ChevronRight,
-    PreviousPage: ChevronLeft,
-    Search: Search,
-    ThirdStateCheck: Remove
-  };
-
-  columns = [
-    {
-      title: "Volume",
-      field: "rawminUnitVolume",
-      type: "numeric",
-      editable: "never"
-    },
-    {
-      title: "Ship volume",
-      field: "shipVolume",
-      type: "numeric",
-      editable: "never"
-    },
-    { title: "Buy price", field: "rawminBuyPrice", editable: "always" },
-    {
-      title: "Dense Veldspar Qty",
-      field: "rawminQty",
-      editable: "always"
-    },
-    {
-      title: "Total cost",
-      field: "rawminTotalCost",
-      editable: "never",
-      render: props => {
-        const value = round(props.rawminTotalCost, 0);
-        const length = value.toString().length;
-        const format = this.selectFormat(length);
-        return (
-          <NumberFormat
-            value={value}
-            displayType={"text"}
-            format={format.trim()}
-            thousandSeparator={true}
-            prefix={"ISK "}
-          />
-        );
-      }
-    },
-    { title: "Compressed V", field: "cminUnitVolume", editable: "never" },
-    {
-      title: "After compression",
-      field: "cminVolume",
-      editable: "never"
-    },
-    {
-      title: "compressed mineral Qty",
-      field: "cminQty",
-      editable: "never"
-    },
-    {
-      title: "Sell price",
-      field: "cminSellPrice",
-      editable: "never"
-    },
-    {
-      title: "Gross profit",
-      field: "grosProfit",
-      editable: "never",
-      render: props => {
-        const value = round(props.grosProfit, 0);
-        const length = value.toString().length;
-        const format = this.selectFormat(length);
-        return (
-          <NumberFormat
-            value={value}
-            displayType={"text"}
-            format={format.trim()}
-            thousandSeparator={true}
-            prefix={"ISK "}
-          />
-        );
-      }
-    },
-    {
-      title: "Broker fee",
-      field: "brokerFee",
-      editable: "never",
-      render: props => {
-        const value = round(props.brokerFee, 0);
-        const length = value.toString().length;
-        const format = this.selectFormat(length);
-        return (
-          <NumberFormat
-            value={value}
-            displayType={"text"}
-            format={format.trim()}
-            thousandSeparator={true}
-            prefix={"ISK "}
-          />
-        );
-      }
-    },
-    {
-      title: "Tax",
-      field: "tax",
-      editable: "never",
-      render: props => {
-        const value = round(props.tax, 0);
-        const length = value.toString().length;
-        const format = this.selectFormat(length);
-        return (
-          <NumberFormat
-            value={value}
-            displayType={"text"}
-            format={format.trim()}
-            thousandSeparator={true}
-            prefix={"ISK "}
-          />
-        );
-      }
-    },
-    {
-      title: "Net profit",
-      field: "netProfit",
-      editable: "never",
-      render: props => {
-        const value = round(props.netProfit, 0);
-        const length = value.toString().length;
-        const format = this.selectFormat(length);
-        return (
-          <NumberFormat
-            value={value}
-            displayType={"text"}
-            format={format.trim()}
-            thousandSeparator={true}
-            prefix={"ISK "}
-          />
-        );
-      }
-    },
-    {
-      title: "Profit",
-      field: "profit",
-      editable: "never",
-      render: props => {
-        const value = round(props.profit, 0);
-        const length = value.toString().length;
-        const format = this.selectFormat(length);
-        return (
-          <NumberFormat
-            value={value}
-            displayType={"text"}
-            format={format.trim()}
-            thousandSeparator={true}
-          />
-        );
-      }
-    },
-    {
-      title: "Profit %",
-      field: "profitP",
-      editable: "never",
-      render: props => round(props.profitP, 1) + "%"
-    }
-  ];
-
-  options = {
-    search: false,
-    padding: "dense",
-    sorting: false,
-    pageSize: 10
-  };
-
   render() {
-    const { rowValues, name } = this.state.minerals[DENSE_VELDSPAR] || [];
+    const { taxRate, brokerFeeRate, minerals } = this.state;
+    const { handleBuyPriceChange, handleSellPriceChange } = this;
+    const { rowValues, name } = minerals[DENSE_VELDSPAR] || [];
     const { rawminBuyPrice, cminSellPrice } = rowValues;
     const rows = this.generateRows(name);
     return (
@@ -392,10 +251,10 @@ class Home extends React.Component {
         <div>
           <span>Broker fee</span>
           <input
-            key="brokerFeeRatio"
+            key="brokerFeeRate"
             type="text"
             onChange={this.handleBrokerFeeChane}
-            value={this.state.brokerFeeRatio}
+            value={this.state.brokerFeeRate}
           />
           <span>taxRate</span>
           <input
@@ -405,32 +264,22 @@ class Home extends React.Component {
             value={this.state.taxRate}
           />
         </div>
-        <div>
-          <span>Buy price</span>
-          <input
-            key="buyprice"
-            type="text"
-            value={rawminBuyPrice}
-            onChange={event => this.handleBuyPriceChange(event, name)}
-          />
-          <span>Sell price</span>
-          <input
-            key="sellprice"
-            type="text"
-            value={cminSellPrice}
-            onChange={event => this.handleSellPriceChange(event, name)}
-          />
-          <MaterialTable
-            title="dense veldspar"
-            columns={this.columns}
-            data={rows}
-            icons={this.icons}
-            options={this.options}
-            components={{
-              Pagination: () => null
-            }}
-          />
-        </div>
+        {Object.values(minerals).map(mineral => {
+          console.log(mineral);
+          return (
+            <MineralSection
+              {...{
+                mineralData: mineral,
+                taxRate,
+                brokerFeeRate,
+                rawminBuyPrice,
+                cminSellPrice,
+                handleBuyPriceChange,
+                handleSellPriceChange
+              }}
+            />
+          );
+        })}
       </>
     );
   }
