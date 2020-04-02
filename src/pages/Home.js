@@ -86,11 +86,11 @@ class Home extends React.Component {
     const pricesRange = range.reduce(
       (acc, _) => {
         const lastPrice = acc[acc.length - 1];
-        const nextPrice = lastPrice + priceStep;
+        const nextPrice = lastPrice + parseFloat(priceStep);
         acc.push(nextPrice);
         return acc;
       },
-      [rawminBuyPrice]
+      [parseFloat(rawminBuyPrice)]
     );
 
     return pricesRange;
@@ -108,14 +108,14 @@ class Home extends React.Component {
     } = rowValues;
 
     const rows = pricesRange.map(rawminBuyPrice => {
-      const rawminTotalCost = (shipVolume / rawminUnitVolume) * rawminBuyPrice;
+      const rawminTotalCost = (shipVolume / rawminUnitVolume) * parseFloat(rawminBuyPrice);
       const rawminQty = shipVolume / rawminUnitVolume;
 
       const cminQty = rawminQty / 100;
       const cminVolume = cminQty * cminUnitVolume;
       const grosProfit = cminQty * cminSellPrice;
-      const brokerFee = -(grosProfit * (brokerFeeRatio / 100));
-      const tax = -(grosProfit * (taxRate / 100));
+      const brokerFee = -(grosProfit * (parseFloat(brokerFeeRatio) / 100));
+      const tax = -(grosProfit * (parseFloat(taxRate) / 100));
       const netProfit = grosProfit + brokerFee + tax;
       const profit = netProfit - rawminTotalCost;
       const profitP = (profit / rawminTotalCost) * 100;
@@ -123,7 +123,7 @@ class Home extends React.Component {
       return {
         rawminUnitVolume: rawminUnitVolume,
         shipVolume: shipVolume,
-        rawminBuyPrice: rawminBuyPrice,
+        rawminBuyPrice: parseFloat(rawminBuyPrice),
         rawminQty: rawminQty,
         rawminTotalCost: rawminTotalCost,
         cminUnitVolume: cminUnitVolume,
@@ -176,7 +176,7 @@ class Home extends React.Component {
       updater: {
         rowValues: {
           ...rowValues,
-          cminSellPrice: +value
+          cminSellPrice: value
         }
       }
     });
@@ -190,7 +190,7 @@ class Home extends React.Component {
       updater: {
         rowValues: {
           ...rowValues,
-          rawminBuyPrice: +value
+          rawminBuyPrice: value
         }
       }
     });
@@ -198,12 +198,12 @@ class Home extends React.Component {
 
   handleBrokerFeeChane = event => {
     const value = event.target.value;
-    this.setState({ brokerFeeRatio: +value });
+    this.setState({ brokerFeeRatio: value });
   };
 
   handleTaxChane = event => {
     const value = event.target.value;
-    this.setState({ taxRate: +value });
+    this.setState({ taxRate: value });
   };
 
   // ---------------------------------------------------------------------- table props
