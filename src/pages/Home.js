@@ -32,8 +32,8 @@ class Home extends React.Component {
           tax: 0,
           netProfit: 0,
           profit: 0,
-          profitP: 0
-        }
+          profitP: 0,
+        },
       },
       [VELDSPAR]: {
         name: VELDSPAR,
@@ -55,8 +55,8 @@ class Home extends React.Component {
           tax: 0,
           netProfit: 0,
           profit: 0,
-          profitP: 0
-        }
+          profitP: 0,
+        },
       },
       [SCORDITE]: {
         name: SCORDITE,
@@ -78,10 +78,10 @@ class Home extends React.Component {
           tax: 0,
           netProfit: 0,
           profit: 0,
-          profitP: 0
-        }
-      }
-    }
+          profitP: 0,
+        },
+      },
+    },
   };
 
   // ---------------------------------------------------------------------- lifecycle
@@ -89,7 +89,7 @@ class Home extends React.Component {
     const priceRange = this.generateBuyPriceRagne(DENSE_VELDSPAR);
 
     const newProps = {
-      pricesRange: [...priceRange]
+      pricesRange: [...priceRange],
     };
     this.updateMineral({ updater: newProps, mineralName: DENSE_VELDSPAR });
   }
@@ -102,18 +102,18 @@ class Home extends React.Component {
         ...minerals,
         [mineralName]: {
           ...minerals[mineralName],
-          ...updater
-        }
-      }
+          ...updater,
+        },
+      },
     };
     this.setState({ ...newState }, () => console.log({ newState: this.state }));
   };
 
-  generateBuyPriceRagne = mineral => {
+  generateBuyPriceRagne = (mineral) => {
     const { numberOfRows, minerals } = this.state;
     const {
       rowValues: { rawminBuyPrice },
-      priceStep
+      priceStep,
     } = minerals[mineral];
     const range = Array.from({ length: numberOfRows }, (v, k) => k + 1);
     const pricesRange = range.reduce(
@@ -129,7 +129,7 @@ class Home extends React.Component {
     return pricesRange;
   };
 
-  generateRows = mineralName => {
+  generateRows = (mineralName) => {
     const { minerals, taxRate, brokerFeeRate } = this.state;
     const pricesRange = this.generateBuyPriceRagne(mineralName);
     const { rowValues } = minerals[mineralName];
@@ -137,10 +137,10 @@ class Home extends React.Component {
       cminSellPrice,
       rawminUnitVolume,
       shipVolume,
-      cminUnitVolume
+      cminUnitVolume,
     } = rowValues;
 
-    const rows = pricesRange.map(rawminBuyPrice => {
+    const rows = pricesRange.map((rawminBuyPrice) => {
       const rawminTotalCost =
         (shipVolume / rawminUnitVolume) * parseFloat(rawminBuyPrice);
       const rawminQty = shipVolume / rawminUnitVolume;
@@ -169,14 +169,14 @@ class Home extends React.Component {
         tax: tax,
         netProfit: netProfit,
         profit: profit,
-        profitP: profitP
+        profitP: profitP,
       };
     });
     // console.log("new rows generated", { rows, pricesRange });
     return rows;
   };
 
-  selectFormat = length => {
+  selectFormat = (length) => {
     switch (length) {
       case 2:
         return "##";
@@ -210,9 +210,9 @@ class Home extends React.Component {
       updater: {
         rowValues: {
           ...rowValues,
-          cminSellPrice: value
-        }
-      }
+          cminSellPrice: value,
+        },
+      },
     });
   };
 
@@ -224,18 +224,18 @@ class Home extends React.Component {
       updater: {
         rowValues: {
           ...rowValues,
-          rawminBuyPrice: value
-        }
-      }
+          rawminBuyPrice: value,
+        },
+      },
     });
   };
 
-  handleBrokerFeeChane = event => {
+  handleBrokerFeeChane = (event) => {
     const value = event.target.value;
     this.setState({ brokerFeeRate: value });
   };
 
-  handleTaxChane = event => {
+  handleTaxChane = (event) => {
     const value = event.target.value;
     this.setState({ taxRate: value });
   };
@@ -243,9 +243,9 @@ class Home extends React.Component {
   render() {
     const { taxRate, brokerFeeRate, minerals } = this.state;
     const { handleBuyPriceChange, handleSellPriceChange } = this;
-    const { rowValues, name } = minerals[DENSE_VELDSPAR] || [];
+    const { rowValues /* , name */ } = minerals[DENSE_VELDSPAR] || [];
     const { rawminBuyPrice, cminSellPrice } = rowValues;
-    const rows = this.generateRows(name);
+    // const rows = this.generateRows(name);
     return (
       <>
         <div>
@@ -264,7 +264,7 @@ class Home extends React.Component {
             value={this.state.taxRate}
           />
         </div>
-        {Object.values(minerals).map(mineral => {
+        {Object.values(minerals).map((mineral) => {
           console.log(mineral);
           return (
             <MineralSection
@@ -275,7 +275,7 @@ class Home extends React.Component {
                 rawminBuyPrice,
                 cminSellPrice,
                 handleBuyPriceChange,
-                handleSellPriceChange
+                handleSellPriceChange,
               }}
             />
           );

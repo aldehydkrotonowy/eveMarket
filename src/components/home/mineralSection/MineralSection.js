@@ -17,9 +17,9 @@ const MineralSection = ({
   cminSellPrice,
   mineralData,
   handleBuyPriceChange,
-  handleSellPriceChange
+  handleSellPriceChange,
 }) => {
-  const { name, pricesRange, rowValues, rows } = mineralData;
+  const { name, /* pricesRange, rowValues, */ rows } = mineralData;
 
   return (
     <Section>
@@ -30,7 +30,7 @@ const MineralSection = ({
             key="buyprice"
             type="text"
             value={rawminBuyPrice}
-            onChange={event => handleBuyPriceChange(event, name)}
+            onChange={(event) => handleBuyPriceChange(event, name)}
           />
         </SettingsValue>
         <SettingsValue>
@@ -39,7 +39,7 @@ const MineralSection = ({
             key="sellprice"
             type="text"
             value={cminSellPrice}
-            onChange={event => handleSellPriceChange(event, name)}
+            onChange={(event) => handleSellPriceChange(event, name)}
           />
         </SettingsValue>
       </Settings>
@@ -51,7 +51,7 @@ const MineralSection = ({
         options={options}
         components={{
           Pagination: () => null,
-          Toolbar: props => {
+          Toolbar: (props) => {
             return (
               <div>
                 <MTableToolbar {...props} />
@@ -59,7 +59,7 @@ const MineralSection = ({
                 <span>bbb</span>
               </div>
             );
-          }
+          },
         }}
       />
     </Section>
