@@ -1,6 +1,18 @@
+//tax eve obl na podstawie wpisanej ceny 5450! a nie rzeczywistej ceny sprzedaży
+import {
+  SHORT_PLAGIOCLASE,
+  SHORT_AZURE_PLAGIOCLASE,
+  // SHORT_SCORDITE,
+  SHORT_CONDENSED_SCORDITE,
+  // SHORT_VELDSPARE,
+  // SHORT_DENSE_VELDSPARE,
+  // SHORT_OMBER,
+} from "../helpers/minerals";
+
 export const transactions = [
   {
     transactionId: 1,
+    name: SHORT_CONDENSED_SCORDITE,
     buy: [
       {
         buyId: 1,
@@ -21,22 +33,25 @@ export const transactions = [
         unore_UnitVolume: 0.1,
       },
     ],
-    sell: {
-      finished: true,
-      sellId: 1,
-      transactionType: "sell",
-      time: "2020-04-02 17:52",
-      brokerFeeRatio: 0.044,
-      taxRatio: 0.05,
-      compressionRatio: 100,
-      core_Name: "Compressed Veldspar",
-      core_Qty: 3279,
-      core_SellPrice: 3399,
-      core_UnitVolume: 0.15,
-    },
+    sell: [
+      {
+        finished: true,
+        sellStatus: "S",
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-02 17:52",
+        compressionRatio: 100,
+        cminName: "Compressed Veldspar",
+        cminQty: 3279,
+        cminSellPrice: 3399,
+        cminUnitVolume: 0.15,
+      },
+    ],
   },
+  //==========================================================================================================
   {
     transactionId: 2,
+    name: SHORT_CONDENSED_SCORDITE,
     buy: [
       {
         buyId: 1,
@@ -147,25 +162,248 @@ export const transactions = [
         unore_UnitVolume: 0.15,
       },
     ],
-    sell: {
-      finished: false,
-      sellId: 1,
-      transactionType: "sell",
-      time: "/* 2020-04-02 17:52 */",
-      brokerFeeRatio: 0.044,
-      taxRatio: 0.05,
-      compressionRatio: 100,
-      core_Name: "Compressed Condensed Scordite",
-      core_Qty: 5450,
-      core_SellPrice: 5450, //wystawienie po tej cenie
-      test_sellPrice: 4000, //current price in jita
-      core_UnitVolume: 0.19,
-      daneOSprzedazy: {
-        sellPrice: 29702500,
-        instantBrokerFee: 1308156,
-        tax: 1485125,
-        afterBrokerAndTax: 26909219,
+    sell: [
+      {
+        finished: true,
+        sellStatus: "S",
+        onMarket: null,
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-06 17:57",
+        compressionRatio: 100,
+        cminName: "Compressed Condensed Scordite",
+        cminQty: 5450,
+        cminSellPrice: 5500,
+        cminUnitVolume: 0.19,
       },
-    },
+    ],
   },
+  //==========================================================================================================
+  {
+    transactionId: 3,
+    name: SHORT_CONDENSED_SCORDITE,
+    buy: [
+      {
+        buyId: 1,
+        transactionType: "buy",
+        time: "2020-04-06 19:37",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 118477,
+        unore_BuyPrice: 27.0,
+        unore_UnitVolume: 0.15,
+      },
+      {
+        buyId: 2,
+        transactionType: "buy",
+        time: "2020-04-06 19:39",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 240000,
+        unore_BuyPrice: 33.0,
+        unore_UnitVolume: 0.15,
+      },
+      {
+        buyId: 3,
+        transactionType: "buy",
+        time: "2020-04-06 19:40",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 9078,
+        unore_BuyPrice: 27.0,
+        unore_UnitVolume: 0.15,
+      },
+    ],
+    sell: [
+      {
+        finished: false,
+        sellStatus: "M",
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-06 17:57????????",
+        compressionRatio: 100,
+        cminName: "Compressed Condensed Scordite",
+        cminQty: 3766,
+        cminSellPrice: 5248,
+        cminUnitVolume: 0.19,
+      },
+    ],
+  },
+  //==========================================================================================================
+  {
+    transactionId: 4,
+    name: SHORT_CONDENSED_SCORDITE,
+    buy: [
+      {
+        buyId: 1,
+        transactionType: "buy",
+        time: "2020-04-06 21:38",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 2519263,
+        unore_BuyPrice: 28.5,
+        unore_UnitVolume: 0.15,
+      },
+      {
+        buyId: 2,
+        transactionType: "buy",
+        time: "2020-04-06 21:39",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 100000,
+        unore_BuyPrice: 27.49,
+        unore_UnitVolume: 0.15,
+      },
+      {
+        buyId: 3,
+        transactionType: "buy",
+        time: "2020-04-06 21:40",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 108799,
+        unore_BuyPrice: 27.5,
+        unore_UnitVolume: 0.15,
+      },
+    ],
+    sell: [
+      {
+        finished: false,
+        sellStatus: "H",
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-06 17:57????????",
+        compressionRatio: 100,
+        cminName: "Compressed Condensed Scordite",
+        cminQty: 8000,
+        cminSellPrice: 3750,
+        cminUnitVolume: 0.19,
+      },
+      {
+        finished: false,
+        sellStatus: "Q",
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-06 17:57????????",
+        compressionRatio: 100,
+        cminName: "Compressed Condensed Scordite",
+        cminQty: 19479,
+        cminSellPrice: 3750,
+        cminUnitVolume: 0.19,
+      },
+    ],
+  },
+  //==========================================================================================================
+  {
+    transactionId: 5,
+    name: SHORT_CONDENSED_SCORDITE,
+    buy: [
+      {
+        buyId: 1,
+        system: "Yulay",
+        transactionType: "buy",
+        time: "2020-04-08 16:16",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 220616,
+        unore_BuyPrice: 16.04,
+        unore_UnitVolume: 0.15,
+      },
+      {
+        buyId: 2,
+        system: "Sheron",
+        transactionType: "buy",
+        time: "2020-04-08 16:16",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 62023,
+        unore_BuyPrice: 10,
+        unore_UnitVolume: 0.15,
+      },
+      {
+        buyId: 1,
+        system: "Pakhshi",
+        transactionType: "buy",
+        time: "2020-04-08 18:20",
+        unore_Name: "Condensed Scordite",
+        unore_Qty: 68419,
+        unore_BuyPrice: 16.02,
+        unore_UnitVolume: 0.15,
+      },
+    ],
+    sell: [
+      {
+        finished: false,
+        sellStatus: "M",
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-06 17:57????????",
+        compressionRatio: 100,
+        cminName: "Compressed Condensed Scordite",
+        cminQty: 3510,
+        cminSellPrice: 4000,
+        cminUnitVolume: 0.19,
+      },
+    ],
+  },
+  //==========================================================================================================
+  {
+    transactionId: 6,
+    name: SHORT_PLAGIOCLASE,
+    buy: [
+      {
+        buyId: 1,
+        system: "Villore",
+        transactionType: "mined",
+        time: null,
+        unore_Name: "Plagioclase",
+        unore_Qty: 39700, //na pewno 100 razy więcej ?
+        unore_BuyPrice: 0,
+        unore_UnitVolume: 0.35,
+      },
+    ],
+    sell: [
+      {
+        finished: false,
+        sellStatus: "M",
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-06 17:57????????",
+        compressionRatio: 100,
+        cminName: "Compressed Plagioclase",
+        cminQty: 397,
+        cminSellPrice: 8100,
+        cminUnitVolume: 0.15,
+      },
+    ],
+  },
+  {
+    transactionId: 7,
+    name: SHORT_AZURE_PLAGIOCLASE,
+    buy: [
+      {
+        buyId: 1,
+        system: "Villore",
+        transactionType: "mined",
+        time: null,
+        unore_Name: "Azure Plagioclase",
+        unore_Qty: 141100,
+        unore_BuyPrice: 0,
+        unore_UnitVolume: 0.35,
+      },
+    ],
+    sell: [
+      {
+        finished: true,
+        sellStatus: "S",
+        sellId: 1,
+        transactionType: "sell",
+        time: "2020-04-08 18:20",
+        compressionRatio: 100,
+        cminName: "Compressed Azure Plagioclase",
+        cminQty: 1411,
+        cminSellPrice: 8200,
+        cminUnitVolume: 0.15,
+      },
+    ],
+  },
+  //==========================================================================================================
+
+  //==========================================================================================================
+  //==========================================================================================================
+  //==========================================================================================================
+  //==========================================================================================================
+  //==========================================================================================================
+  //==========================================================================================================
 ];

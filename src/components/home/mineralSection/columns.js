@@ -1,138 +1,105 @@
-import round from "lodash";
-
+import React from "react";
 import Search from "@material-ui/icons/Search";
-// import ViewColumn from "@material-ui/icons/ViewColumn";
 import SaveAlt from "@material-ui/icons/SaveAlt";
 import ChevronLeft from "@material-ui/icons/ChevronLeft";
 import ChevronRight from "@material-ui/icons/ChevronRight";
 import FirstPage from "@material-ui/icons/FirstPage";
 import LastPage from "@material-ui/icons/LastPage";
-// import Add from "@material-ui/icons/Add";
 import Check from "@material-ui/icons/Check";
 import FilterList from "@material-ui/icons/FilterList";
 import Remove from "@material-ui/icons/Remove";
+import { roundedNum } from "../../../utils/utils";
+import FormatedNum from "../../../shared/FormatedNum";
+import { GoodProfit, LossProfit } from "./style";
 
 export const columns = [
-  {
-    title: "Volume",
-    field: "rawminUnitVolume",
-    type: "numeric",
-    editable: "never"
-  },
-  {
-    title: "Ship volume",
-    field: "shipVolume",
-    type: "numeric",
-    editable: "never"
-  },
   { title: "Buy price", field: "rawminBuyPrice", editable: "always" },
-  {
-    title: "Dense Veldspar Qty",
-    field: "rawminQty",
-    editable: "always"
-  },
   {
     title: "Total cost",
     field: "rawminTotalCost",
     editable: "never",
-    render: props => {
-      const value = round(props.rawminTotalCost, 0);
-      // const length = value.toString().length;
-      // const format = this.selectFormat(length);
-      return value;
-      // <NumberFormat
-      //   value={value}
-      //   displayType={"text"}
-      //   format={format.trim()}
-      //   thousandSeparator={true}
-      //   prefix={"ISK "}
-      // />
-    }
+    render: (props) => {
+      return <FormatedNum value={props.rawminTotalCost} precision={0} />;
+    },
   },
-  { title: "Compressed V", field: "cminUnitVolume", editable: "never" },
   {
     title: "After compression",
     field: "cminVolume",
-    editable: "never"
+    editable: "never",
   },
   {
-    title: "compressed mineral Qty",
+    title: "compressed qty",
     field: "cminQty",
-    editable: "never"
+    editable: "never",
   },
   {
     title: "Sell price",
     field: "cminSellPrice",
-    editable: "never"
+    editable: "never",
   },
   {
     title: "Gross profit",
     field: "grosProfit",
     editable: "never",
-    render: props => {
-      const value = round(props.grosProfit, 0);
-      // const length = value.toString().length;
-      // const format = this.selectFormat(length);
-      return value;
-    }
+    render: (props) => {
+      return <FormatedNum value={props.grosProfit} precision={0} />;
+    },
   },
   {
     title: "Broker fee",
     field: "brokerFee",
     editable: "never",
-    render: props => {
-      const value = round(props.brokerFee, 0);
-      // const length = value.toString().length;
-      // const format = this.selectFormat(length);
-      return value;
-    }
+    render: (props) => {
+      return <FormatedNum value={props.brokerFee} precision={0} />;
+    },
   },
   {
     title: "Tax",
     field: "tax",
     editable: "never",
-    render: props => {
-      const value = round(props.tax, 0);
-      // const length = value.toString().length;
-      // const format = this.selectFormat(length);
-      return value;
-    }
+    render: (props) => {
+      return <FormatedNum value={props.tax} precision={0} />;
+    },
   },
   {
     title: "Net profit",
     field: "netProfit",
     editable: "never",
-    render: props => {
-      const value = round(props.netProfit, 0);
-      // const length = value.toString().length;
-      // const format = this.selectFormat(length);
-      return value;
-    }
+    render: (props) => {
+      return <FormatedNum value={props.netProfit} precision={0} />;
+    },
   },
   {
     title: "Profit",
     field: "profit",
     editable: "never",
-    render: props => {
-      const value = round(props.profit, 0);
-      // const length = value.toString().length;
-      // const format = this.selectFormat(length);
-      return value;
-    }
+    render: (props) => {
+      return <FormatedNum value={props.profit} precision={0} />;
+    },
   },
   {
     title: "Profit %",
     field: "profitP",
     editable: "never",
-    render: props => round(props.profitP, 1) + "%"
-  }
+    render: (props) => {
+      const value = roundedNum(props.profitP, 2);
+      if (value > 10) {
+        return <GoodProfit>{value.toFixed(2)}</GoodProfit>;
+      } else if (value < 10) {
+        return <LossProfit>{value.toFixed(2)}</LossProfit>;
+      } else {
+        return "?";
+      }
+    },
+  },
 ];
 
 export const options = {
   search: false,
   padding: "dense",
   sorting: false,
-  pageSize: 10
+  pageSize: 25,
+  showTitle: false,
 };
 
 export const icons = {
@@ -145,5 +112,5 @@ export const icons = {
   NextPage: ChevronRight,
   PreviousPage: ChevronLeft,
   Search: Search,
-  ThirdStateCheck: Remove
+  ThirdStateCheck: Remove,
 };

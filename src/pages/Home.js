@@ -1,22 +1,53 @@
 import React from "react";
-// import NumberFormat from "react-number-format";
 // import round from "lodash/round";
 // import MaterialTable, { MTableToolbar } from "material-table";
-import { SCORDITE, DENSE_VELDSPAR, VELDSPAR } from "../helpers/minerals";
+import {
+  SCORDITE,
+  DENSE_VELDSPAR,
+  VELDSPAR,
+  CONDENSED_SCORDITE,
+} from "../helpers/minerals";
 import MineralSection from "../components/home/mineralSection/MineralSection";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import TabPanel from "../shared/TabPanel";
+import { styled } from "@material-ui/core/styles";
+
+const InfoWrapper = styled("div")({
+  padding: "15px",
+  fontSize: "14px",
+});
+const TaxLabel = styled("span")({
+  color: "black",
+  margin: "6px 2px 6px 0px",
+});
+const TaxValue = styled("span")({
+  color: "#007cfb",
+  margin: "6px 30px 6px 0px",
+});
+const BrokerLabel = styled("span")({
+  color: "black",
+  margin: "6px 5px",
+});
+const BrokerValue = styled("span")({
+  color: "#007cfb",
+  margin: "6px 5px",
+});
 
 class Home extends React.Component {
   state = {
+    selectedTab: 0,
     pricesRangesReady: false,
-    numberOfRows: 10,
-    taxRate: 5,
-    brokerFeeRate: 4,
+    taxRate: 0.05,
+    brokerFeeRate: 0.04404193632,
     minerals: {
-      [DENSE_VELDSPAR]: {
-        name: DENSE_VELDSPAR,
-        priceStep: 0.5,
+      [VELDSPAR]: {
+        name: VELDSPAR,
+        priceStep: 2,
+        fromBuyPrice: 16,
+        toBuyPrice: 40,
         pricesRange: [],
-        rows: [],
         rowValues: {
           rawminUnitVolume: 0.1,
           shipVolume: 46200,
@@ -26,7 +57,7 @@ class Home extends React.Component {
           cminUnitVolume: 0.15,
           cminVolume: 0,
           cminQty: 0,
-          cminSellPrice: 2048,
+          cminSellPrice: 2800,
           grosProfit: 0,
           brokerFee: 0,
           tax: 0,
@@ -35,11 +66,12 @@ class Home extends React.Component {
           profitP: 0,
         },
       },
-      [VELDSPAR]: {
-        name: VELDSPAR,
-        priceStep: 0.5,
+      [DENSE_VELDSPAR]: {
+        name: DENSE_VELDSPAR,
+        priceStep: 2,
+        fromBuyPrice: 16,
+        toBuyPrice: 40,
         pricesRange: [],
-        rows: [],
         rowValues: {
           rawminUnitVolume: 0.1,
           shipVolume: 46200,
@@ -49,7 +81,7 @@ class Home extends React.Component {
           cminUnitVolume: 0.15,
           cminVolume: 0,
           cminQty: 0,
-          cminSellPrice: 2222,
+          cminSellPrice: 4600,
           grosProfit: 0,
           brokerFee: 0,
           tax: 0,
@@ -60,9 +92,10 @@ class Home extends React.Component {
       },
       [SCORDITE]: {
         name: SCORDITE,
-        priceStep: 0.5,
+        priceStep: 2,
+        fromBuyPrice: 16,
+        toBuyPrice: 40,
         pricesRange: [],
-        rows: [],
         rowValues: {
           rawminUnitVolume: 0.15,
           shipVolume: 46200,
@@ -72,7 +105,31 @@ class Home extends React.Component {
           cminUnitVolume: 0.19,
           cminVolume: 0,
           cminQty: 0,
-          cminSellPrice: 2222,
+          cminSellPrice: 3700,
+          grosProfit: 0,
+          brokerFee: 0,
+          tax: 0,
+          netProfit: 0,
+          profit: 0,
+          profitP: 0,
+        },
+      },
+      [CONDENSED_SCORDITE]: {
+        name: CONDENSED_SCORDITE,
+        priceStep: 1,
+        fromBuyPrice: 16,
+        toBuyPrice: 40,
+        pricesRange: [],
+        rowValues: {
+          rawminUnitVolume: 0.15,
+          shipVolume: 46200,
+          rawminBuyPrice: 10,
+          rawminQty: 0,
+          rawminTotalCost: 0,
+          cminUnitVolume: 0.19,
+          cminVolume: 0,
+          cminQty: 0,
+          cminSellPrice: 5200,
           grosProfit: 0,
           brokerFee: 0,
           tax: 0,
@@ -86,12 +143,20 @@ class Home extends React.Component {
 
   // ---------------------------------------------------------------------- lifecycle
   componentDidMount() {
-    const priceRange = this.generateBuyPriceRagne(DENSE_VELDSPAR);
+    const priceRange = this.generateBuyPriceRagne();
 
-    const newProps = {
-      pricesRange: [...priceRange],
-    };
-    this.updateMineral({ updater: newProps, mineralName: DENSE_VELDSPAR });
+    priceRange.forEach((rangeForMineral) => {
+      const newProps = {
+        pricesRange: [...rangeForMineral.range],
+      };
+
+      setTimeout(() => {
+        this.updateMineral({
+          updater: newProps,
+          mineralName: rangeForMineral.name,
+        });
+      }, 10);
+    });
   }
 
   // ---------------------------------------------------------------------- helpers
@@ -109,96 +174,23 @@ class Home extends React.Component {
     this.setState({ ...newState }, () => console.log({ newState: this.state }));
   };
 
-  generateBuyPriceRagne = (mineral) => {
-    const { numberOfRows, minerals } = this.state;
-    const {
-      rowValues: { rawminBuyPrice },
-      priceStep,
-    } = minerals[mineral];
-    const range = Array.from({ length: numberOfRows }, (v, k) => k + 1);
-    const pricesRange = range.reduce(
-      (acc, _) => {
-        const lastPrice = acc[acc.length - 1];
-        const nextPrice = lastPrice + parseFloat(priceStep);
-        acc.push(nextPrice);
-        return acc;
-      },
-      [parseFloat(rawminBuyPrice)]
-    );
+  generateBuyPriceRagne = () => {
+    const { minerals } = this.state;
+    const pricesRanges = Object.values(minerals).map((mineral) => {
+      const { priceStep, fromBuyPrice, toBuyPrice, name } = mineral;
 
-    return pricesRange;
-  };
+      let range = [fromBuyPrice];
+      let currentPrice = fromBuyPrice;
+      do {
+        currentPrice += priceStep;
+        range.push(currentPrice);
+      } while (currentPrice <= toBuyPrice);
 
-  generateRows = (mineralName) => {
-    const { minerals, taxRate, brokerFeeRate } = this.state;
-    const pricesRange = this.generateBuyPriceRagne(mineralName);
-    const { rowValues } = minerals[mineralName];
-    const {
-      cminSellPrice,
-      rawminUnitVolume,
-      shipVolume,
-      cminUnitVolume,
-    } = rowValues;
-
-    const rows = pricesRange.map((rawminBuyPrice) => {
-      const rawminTotalCost =
-        (shipVolume / rawminUnitVolume) * parseFloat(rawminBuyPrice);
-      const rawminQty = shipVolume / rawminUnitVolume;
-
-      const cminQty = rawminQty / 100;
-      const cminVolume = cminQty * cminUnitVolume;
-      const grosProfit = cminQty * cminSellPrice;
-      const brokerFee = -(grosProfit * (parseFloat(brokerFeeRate) / 100));
-      const tax = -(grosProfit * (parseFloat(taxRate) / 100));
-      const netProfit = grosProfit + brokerFee + tax;
-      const profit = netProfit - rawminTotalCost;
-      const profitP = (profit / rawminTotalCost) * 100;
-
-      return {
-        rawminUnitVolume: rawminUnitVolume,
-        shipVolume: shipVolume,
-        rawminBuyPrice: parseFloat(rawminBuyPrice),
-        rawminQty: rawminQty,
-        rawminTotalCost: rawminTotalCost,
-        cminUnitVolume: cminUnitVolume,
-        cminVolume: cminVolume,
-        cminQty: cminQty,
-        cminSellPrice: cminSellPrice,
-        grosProfit: grosProfit,
-        brokerFee: brokerFee,
-        tax: tax,
-        netProfit: netProfit,
-        profit: profit,
-        profitP: profitP,
-      };
+      return { name: name, range };
     });
-    // console.log("new rows generated", { rows, pricesRange });
-    return rows;
-  };
 
-  selectFormat = (length) => {
-    switch (length) {
-      case 2:
-        return "##";
-      case 3:
-        return "###";
-      case 4:
-        return "# ###";
-      case 5:
-        return "## ###";
-      case 6:
-        return "### ###";
-      case 7:
-        return "# ### ###";
-      case 8:
-        return "## ### ###";
-      case 9:
-        return "### ### ###";
-      case 10:
-        return "# ### ### ###";
-      default:
-        return "##############";
-    }
+    console.log({ pricesRanges });
+    return pricesRanges;
   };
 
   // ---------------------------------------------------------------------- handlers
@@ -240,44 +232,59 @@ class Home extends React.Component {
     this.setState({ taxRate: value });
   };
 
+  handleTabChange = (event, newValue) => {
+    this.setState({ selectedTab: newValue });
+  };
+
   render() {
-    const { taxRate, brokerFeeRate, minerals } = this.state;
-    const { handleBuyPriceChange, handleSellPriceChange } = this;
-    const { rowValues /* , name */ } = minerals[DENSE_VELDSPAR] || [];
-    const { rawminBuyPrice, cminSellPrice } = rowValues;
-    // const rows = this.generateRows(name);
+    const { taxRate, brokerFeeRate, minerals, selectedTab } = this.state;
+    const {
+      handleBuyPriceChange,
+      handleSellPriceChange,
+      handleTabChange,
+    } = this;
     return (
       <>
-        <div>
-          <span>Broker fee</span>
-          <input
-            key="brokerFeeRate"
-            type="text"
-            onChange={this.handleBrokerFeeChane}
-            value={this.state.brokerFeeRate}
-          />
-          <span>taxRate</span>
-          <input
-            key="taxRate"
-            type="text"
-            onChange={this.handleTaxChane}
-            value={this.state.taxRate}
-          />
-        </div>
-        {Object.values(minerals).map((mineral) => {
-          console.log(mineral);
+        <AppBar position="static" color="default">
+          <InfoWrapper>
+            <BrokerLabel>Jita broker Precise Fee</BrokerLabel>
+            <BrokerValue>{this.state.brokerFeeRate}</BrokerValue>
+            <TaxLabel>Jita tax fee</TaxLabel>
+            <TaxValue>{this.state.taxRate}</TaxValue>
+          </InfoWrapper>
+          <Tabs
+            value={selectedTab}
+            onChange={handleTabChange}
+            variant="scrollable"
+            scrollButtons="on"
+            indicatorColor="primary"
+            textColor="primary"
+            aria-label="scrollable force tabs example"
+          >
+            {Object.values(minerals).map((mineral, index) => {
+              return (
+                <Tab
+                  label={mineral.name}
+                  id={`scrollable-force-tab-${index}`} /* icon={<HomeIcon />} {...a11yProps(index)}  */
+                />
+              );
+            })}
+          </Tabs>
+        </AppBar>
+
+        {Object.values(minerals).map((mineral, index) => {
           return (
-            <MineralSection
-              {...{
-                mineralData: mineral,
-                taxRate,
-                brokerFeeRate,
-                rawminBuyPrice,
-                cminSellPrice,
-                handleBuyPriceChange,
-                handleSellPriceChange,
-              }}
-            />
+            <TabPanel value={selectedTab} index={index}>
+              <MineralSection
+                {...{
+                  mineralData: mineral,
+                  taxRate,
+                  brokerFeeRate,
+                  handleBuyPriceChange,
+                  handleSellPriceChange,
+                }}
+              />
+            </TabPanel>
           );
         })}
       </>
