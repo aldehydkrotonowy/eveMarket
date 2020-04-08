@@ -6,6 +6,7 @@ import {
   DENSE_VELDSPAR,
   VELDSPAR,
   CONDENSED_SCORDITE,
+  AZURE_PLAGIOCLASE,
 } from "../helpers/minerals";
 import MineralSection from "../components/home/mineralSection/MineralSection";
 import AppBar from "@material-ui/core/AppBar";
@@ -51,7 +52,6 @@ class Home extends React.Component {
         rowValues: {
           rawminUnitVolume: 0.1,
           shipVolume: 46200,
-          rawminBuyPrice: 10,
           rawminQty: 0,
           rawminTotalCost: 0,
           cminUnitVolume: 0.15,
@@ -75,7 +75,6 @@ class Home extends React.Component {
         rowValues: {
           rawminUnitVolume: 0.1,
           shipVolume: 46200,
-          rawminBuyPrice: 10,
           rawminQty: 0,
           rawminTotalCost: 0,
           cminUnitVolume: 0.15,
@@ -99,7 +98,6 @@ class Home extends React.Component {
         rowValues: {
           rawminUnitVolume: 0.15,
           shipVolume: 46200,
-          rawminBuyPrice: 10,
           rawminQty: 0,
           rawminTotalCost: 0,
           cminUnitVolume: 0.19,
@@ -123,13 +121,35 @@ class Home extends React.Component {
         rowValues: {
           rawminUnitVolume: 0.15,
           shipVolume: 46200,
-          rawminBuyPrice: 10,
           rawminQty: 0,
           rawminTotalCost: 0,
           cminUnitVolume: 0.19,
           cminVolume: 0,
           cminQty: 0,
           cminSellPrice: 5200,
+          grosProfit: 0,
+          brokerFee: 0,
+          tax: 0,
+          netProfit: 0,
+          profit: 0,
+          profitP: 0,
+        },
+      },
+      [AZURE_PLAGIOCLASE]: {
+        name: AZURE_PLAGIOCLASE,
+        priceStep: 1,
+        fromBuyPrice: 10,
+        toBuyPrice: 60,
+        pricesRange: [],
+        rowValues: {
+          rawminUnitVolume: 0.35,
+          shipVolume: 46200,
+          rawminQty: 0,
+          rawminTotalCost: 0,
+          cminUnitVolume: 0.15,
+          cminVolume: 0,
+          cminQty: 0,
+          cminSellPrice: 8200,
           grosProfit: 0,
           brokerFee: 0,
           tax: 0,
@@ -208,19 +228,19 @@ class Home extends React.Component {
     });
   };
 
-  handleBuyPriceChange = (event, mineralName) => {
-    const rowValues = this.state.minerals[mineralName].rowValues;
-    const value = event.target.value;
-    this.updateMineral({
-      mineralName: mineralName,
-      updater: {
-        rowValues: {
-          ...rowValues,
-          rawminBuyPrice: value,
-        },
-      },
-    });
-  };
+  // handleBuyPriceChange = (event, mineralName) => {
+  //   const rowValues = this.state.minerals[mineralName].rowValues;
+  //   const value = event.target.value;
+  //   this.updateMineral({
+  //     mineralName: mineralName,
+  //     updater: {
+  //       rowValues: {
+  //         ...rowValues,
+  //         rawminBuyPrice: value,
+  //       },
+  //     },
+  //   });
+  // };
 
   handleBrokerFeeChane = (event) => {
     const value = event.target.value;
@@ -238,11 +258,7 @@ class Home extends React.Component {
 
   render() {
     const { taxRate, brokerFeeRate, minerals, selectedTab } = this.state;
-    const {
-      handleBuyPriceChange,
-      handleSellPriceChange,
-      handleTabChange,
-    } = this;
+    const { handleSellPriceChange, handleTabChange } = this;
     return (
       <>
         <AppBar position="static" color="default">
@@ -280,7 +296,6 @@ class Home extends React.Component {
                   mineralData: mineral,
                   taxRate,
                   brokerFeeRate,
-                  handleBuyPriceChange,
                   handleSellPriceChange,
                 }}
               />

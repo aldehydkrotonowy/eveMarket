@@ -356,14 +356,14 @@ export const transactions = [
     sell: [
       {
         finished: false,
-        sellStatus: "M",
+        sellStatus: "S",
         sellId: 1,
         transactionType: "sell",
-        time: "2020-04-06 17:57????????",
+        time: "2020-04-08 20:43",
         compressionRatio: 100,
         cminName: "Compressed Plagioclase",
         cminQty: 397,
-        cminSellPrice: 8100,
+        cminSellPrice: 8390,
         cminUnitVolume: 0.15,
       },
     ],

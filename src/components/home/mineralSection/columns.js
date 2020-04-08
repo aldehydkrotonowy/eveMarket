@@ -98,7 +98,7 @@ export const options = {
   search: false,
   padding: "dense",
   sorting: false,
-  pageSize: 25,
+  pageSize: 60,
   showTitle: false,
 };
 

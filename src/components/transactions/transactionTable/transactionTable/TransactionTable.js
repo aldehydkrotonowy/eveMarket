@@ -75,7 +75,7 @@ const TransactionTable = ({ summary }) => {
             } else if (bringToJita.test(row.collectedStatuses)) {
               cl = classes.bringToJita;
             } else {
-              cl = classes.default;
+              cl = classes.notOnMarked;
             }
             return (
               <TableRow key={row.name} className={cl}>
