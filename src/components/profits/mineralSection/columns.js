@@ -10,7 +10,7 @@ import FilterList from "@material-ui/icons/FilterList";
 import Remove from "@material-ui/icons/Remove";
 import { roundedNum } from "../../../utils/utils";
 import FormatedNum from "../../shared/FormatedNum";
-import { GoodProfit, LossProfit } from "./style";
+import { GoodProfit, LossProfit } from "./mineralSectionStyle";
 
 export const columns = [
   { title: "Buy price", field: "rawminBuyPrice", editable: "always" },
@@ -116,14 +116,6 @@ export const columns = [
     },
   },
 ];
-
-export const options = {
-  search: false,
-  padding: "dense",
-  sorting: false,
-  pageSize: 60,
-  showTitle: false,
-};
 
 export const icons = {
   Check: Check,

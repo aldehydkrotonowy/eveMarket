@@ -1,5 +1,5 @@
 import React from "react";
-import FormatedNum from "../../../../shared/FormatedNum";
+import FormatedNum from "../../../shared/FormatedNum";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -35,6 +35,9 @@ const useStyles = makeStyles({
       background: "white",
     },
   },
+  tableSections: {
+    borderRight: "1px solid rgb(224, 224, 224)",
+  },
 });
 
 const TransactionTable = ({ summary }) => {
@@ -50,12 +53,15 @@ const TransactionTable = ({ summary }) => {
           <TableRow>
             <TableCell align="right">Id</TableCell>
             <TableCell align="right">Symbol</TableCell>
-            <TableCell align="right">Quantity</TableCell>
-            <TableCell align="right">Volume</TableCell>
+            <TableCell align="right">Buy Quantity</TableCell>
+            <TableCell align="right">Buy Volume</TableCell>
             <TableCell align="right">Buy Value</TableCell>
-            <TableCell align="right">Average Price</TableCell>
+            <TableCell align="right" className={classes.tableSections}>
+              Buy Price
+            </TableCell>
 
-            <TableCell align="right">Compressed Qty</TableCell>
+            <TableCell align="right">Sell Quantity</TableCell>
+            <TableCell align="right">Sell Price</TableCell>
             <TableCell align="right">Gross profit</TableCell>
             <TableCell align="right">Broker</TableCell>
             <TableCell align="right">Tax</TableCell>
@@ -107,7 +113,7 @@ const TransactionTable = ({ summary }) => {
                     postfix=" ISK"
                   />
                 </TableCell>
-                <TableCell align="right">
+                <TableCell align="right" className={classes.tableSections}>
                   <FormatedNum
                     value={row.averagePricePerUnit}
                     precision={2}
@@ -117,6 +123,13 @@ const TransactionTable = ({ summary }) => {
                 <TableCell align="right">
                   <FormatedNum
                     value={row.totalSellQty}
+                    precision={2}
+                    postfix=" u"
+                  />
+                </TableCell>
+                <TableCell align="right">
+                  <FormatedNum
+                    value={row.sellPrice}
                     precision={2}
                     postfix=" ISK"
                   />

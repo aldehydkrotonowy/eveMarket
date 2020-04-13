@@ -1,6 +1,6 @@
 import React from "react";
 import NumberFormat from "react-number-format";
-import { roundedNum } from "../utils/utils";
+import { roundedNum } from "../../utils/utils";
 
 const FormatedNum = (props) => {
   const { value, precision = 2, postfix } = props;

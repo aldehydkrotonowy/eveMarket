@@ -20,11 +20,10 @@ import {
   TableTitle,
 } from "./style";
 
+import { BROKER_FEE_RATE, TAX_RATE } from "../../../helpers/minerals";
+
 const MineralSection = ({
-  taxRate,
-  brokerFeeRate,
   mineralData: { name, pricesRange, rowValues },
-  handleBuyPriceChange,
   handleSellPriceChange,
 }) => {
   const [rows, setRows] = useState([]);
@@ -45,26 +44,26 @@ const MineralSection = ({
 
     const rows = pricesRange.map((rawminGeneratedBuyPrice) => {
       const rawminQty = shipVolume / rawminUnitVolume;
-      const rawminTotalCost = rawminQty * parseFloat(rawminGeneratedBuyPrice);
+      const uminCost = rawminQty * parseFloat(rawminGeneratedBuyPrice);
 
       const cminQty = rawminQty / 100;
       const cminVolume = cminQty * cminUnitVolume;
 
       const grosProfit = cminQty * cminSellPrice;
 
-      const brokerFee = -(grosProfit * parseFloat(brokerFeeRate));
-      const tax = -(grosProfit * parseFloat(taxRate));
+      const brokerFee = -(grosProfit * parseFloat(BROKER_FEE_RATE));
+      const tax = -(grosProfit * parseFloat(TAX_RATE));
 
       const netProfit = grosProfit + brokerFee + tax;
-      const profit = netProfit - rawminTotalCost;
-      const profitP = (profit / rawminTotalCost) * 100;
+      const profit = netProfit - uminCost;
+      const profitP = (profit / uminCost) * 100;
 
       return {
         rawminUnitVolume: rawminUnitVolume,
         shipVolume: shipVolume,
         rawminBuyPrice: parseFloat(rawminGeneratedBuyPrice),
         rawminQty: rawminQty,
-        rawminTotalCost: rawminTotalCost,
+        uminCost: uminCost,
         cminUnitVolume: cminUnitVolume,
         cminVolume: cminVolume,
         cminQty: cminQty,
@@ -79,7 +78,7 @@ const MineralSection = ({
     });
 
     return rows;
-  }, [pricesRange, rowValues, brokerFeeRate, taxRate]);
+  }, [pricesRange, rowValues]);
 
   useEffect(() => {
     setRows(generateRows());
@@ -100,15 +99,6 @@ const MineralSection = ({
   return (
     <Section>
       <Settings>
-        {/* <SettingsValue>
-          <span>Buy price</span>
-          <input
-            key="buyprice"
-            type="text"
-            value={rowValues.rawminBuyPrice}
-            onChange={(event) => handleBuyPriceChange(event, name)}
-          />
-        </SettingsValue> */}
         <SettingsValue>
           <span>Sell price</span>
           <input
@@ -128,7 +118,6 @@ const MineralSection = ({
         components={{
           Pagination: () => null,
           Toolbar: (props) => {
-            console.log(rows, headers.shipVolume);
             return (
               <BasicInfo>
                 <TableTitle>{name}</TableTitle>
@@ -138,10 +127,10 @@ const MineralSection = ({
                   compressed {name} unit volume:{" "}
                 </MTableInfoLabel>
                 <MTableInfoValue>{headers.cminUnitVolume}</MTableInfoValue>
-                <MTableInfoLabel>Quantity: </MTableInfoLabel>
-                <MTableInfoValue>{headers.rawminQty}</MTableInfoValue>
+                <MTableInfoLabel>Raw mineral quantity: </MTableInfoLabel>
+                <MTableInfoValue>{headers.rawminQty} u</MTableInfoValue>
                 <MTableInfoLabel>Miasmos Volume: </MTableInfoLabel>
-                <MTableInfoValue>{headers.shipVolume}</MTableInfoValue>
+                <MTableInfoValue>{headers.shipVolume} m3</MTableInfoValue>
               </BasicInfo>
             );
           },

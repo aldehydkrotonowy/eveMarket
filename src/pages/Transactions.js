@@ -1,7 +1,7 @@
 import React from "react";
 
 import { transactions } from "../helpers/transactions";
-import { BROCKER_FEE_RATE, TAX_RATE } from "../helpers/minerals";
+import { BROKER_FEE_RATE, TAX_RATE } from "../helpers/minerals";
 import TransactionTable from "../components/transactions/transactionTable/transactionTable/TransactionTable";
 import Legend from "../components/transactions/transactionTable/legend/Legend";
 
@@ -11,11 +11,15 @@ const prepareSellSummary = ({ transactionId, sell }) => {
       acc.totalSellQty += sellObj.cminQty;
       acc.grossProfit += sellObj.cminQty * sellObj.cminSellPrice;
       acc.transactionId = transactionId;
+      acc.sellPriceSum += sellObj.cminSellPrice;
       acc.finished = sellObj.finished ? ++acc.finished : acc.finished;
       acc.collectedStatuses = acc.collectedStatuses + sellObj.sellStatus;
+      acc.numOfSellTransactions = sell.length;
       return acc;
     },
     {
+      numOfSellTransactions: 0,
+      sellPriceSum: 0,
       transactionId: 0,
       totalSellQty: 0,
       grossProfit: 0,
@@ -45,9 +49,12 @@ const Transaction = () => {
     const buySummary = prepareBuySummary({ transactionId, buy });
     const sellSummary = prepareSellSummary({ transactionId, sell });
 
+    const sellPrice =
+      sellSummary.sellPriceSum / sellSummary.numOfSellTransactions;
+
     const averagePricePerUnit = buySummary.totalValue / buySummary.totalQty;
     const grossProfit = sellSummary.grossProfit;
-    const brokerFee = grossProfit * BROCKER_FEE_RATE;
+    const brokerFee = grossProfit * BROKER_FEE_RATE;
     const tax = grossProfit * TAX_RATE;
     const netto = grossProfit - brokerFee - tax;
     const profit = netto - buySummary.totalValue;
@@ -59,6 +66,7 @@ const Transaction = () => {
       volume: buySummary.vol,
       totalQty: buySummary.totalQty,
       totalValue: buySummary.totalValue,
+      sellPrice: sellPrice,
       averagePricePerUnit,
       totalSellQty: sellSummary.totalSellQty,
       grossProfit,

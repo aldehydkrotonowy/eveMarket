@@ -4,7 +4,8 @@ import "./App.css";
 import styles from "./test.module.css";
 import Home from "./pages/Home";
 import Transactions from "./pages/Transactions";
-import TabPanel from "./shared/TabPanel";
+import Profits from "./pages/profits/Profits";
+import TabPanel from "./components/shared/TabPanel";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -54,7 +55,7 @@ function App() {
         >
           <Tab label="HOME" icon={<HomeIcon />} {...a11yProps(0)} />
           <Tab label="BUY/SELL" icon={<FavoriteIcon />} {...a11yProps(1)} />
-          <Tab label="Item Three" icon={<PersonPinIcon />} {...a11yProps(2)} />
+          <Tab label="PROFITS" icon={<PersonPinIcon />} {...a11yProps(2)} />
           <Tab label="Item Four" icon={<HelpIcon />} {...a11yProps(3)} />
           <Tab label="Item Five" icon={<ShoppingBasket />} {...a11yProps(4)} />
           <Tab label="Item Six" icon={<ThumbDown />} {...a11yProps(5)} />
@@ -68,7 +69,7 @@ function App() {
         <Transactions />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Profits />
       </TabPanel>
       <TabPanel value={value} index={3}>
         Item Four
