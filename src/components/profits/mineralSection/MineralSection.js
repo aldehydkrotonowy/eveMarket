@@ -167,7 +167,7 @@ const MineralSection = ({ mineralData, handleSellPriceChange }) => {
   useEffect(() => {
     dispatch({ type: "GENERATE_ROWS" });
   }, [state.pricesRange]);
-
+  console.log("mineral section", state);
   return (
     <>
       {!isEmpty(state.mineralData) && !isEmpty(state.rows) ? (

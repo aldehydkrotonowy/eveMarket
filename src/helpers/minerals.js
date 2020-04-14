@@ -85,21 +85,33 @@ const omberFamily = {
 const scorditeFamily = {
   normal: {
     scordite: {
+      priceStep: 5,
+      fromBuyPrice: 20,
+      toBuyPrice: 100,
       volume: 0.15,
       name: "Scordite",
       shortName: "Scr",
     },
     massiveScordite: {
+      priceStep: 5,
+      fromBuyPrice: 20,
+      toBuyPrice: 100,
       volume: 0.15,
       name: "Massive Scordite",
       shortName: "MScr",
     },
     glossyScordite: {
+      priceStep: 5,
+      fromBuyPrice: 20,
+      toBuyPrice: 100,
       volume: 0.15,
       name: "Glossy Scordite",
       shortName: "GScr",
     },
     condensedScordite: {
+      priceStep: 1,
+      fromBuyPrice: 15,
+      toBuyPrice: 100,
       volume: 0.15,
       name: "Condensed Scordite",
       shortName: "CScr",
@@ -108,21 +120,25 @@ const scorditeFamily = {
   compresssed: {
     scordite: {
       volume: 0.19,
+      cminSellPrice: 4000,
       name: "Compressed Scordite",
       shortName: "cScr",
     },
     massiveScordite: {
       volume: 0.19,
+      cminSellPrice: 4000,
       name: "Compressed Massive Scordite",
       shortName: "cMScr",
     },
     glossyScordite: {
       volume: 0.19,
+      cminSellPrice: 4000,
       name: "Compressed Glossy Scordite",
       shortName: "cGScr",
     },
     condensedScordite: {
       volume: 0.19,
+      cminSellPrice: 4000,
       name: "Compressed Condensed Scordite",
       shortName: "cCScr",
     },
@@ -140,7 +156,7 @@ const veldsparFamily = {
       shortName: "Veld",
     },
     denseVeldspar: {
-      priceStep: 2,
+      priceStep: 1,
       fromBuyPrice: 16,
       toBuyPrice: 40,
       volume: 0.1,
@@ -167,21 +183,25 @@ const veldsparFamily = {
   compresssed: {
     veldspar: {
       volume: 0.15,
+      cminSellPrice: 2000,
       name: "Compressed Veldspar",
       shortName: "cVeld",
     },
     denseVeldspar: {
       volume: 0.15,
+      cminSellPrice: 3000,
       name: "Compressed Dense Veldspar",
       shortName: "cDVeld",
     },
     concentratedVeldspar: {
       volume: 0.15,
+      cminSellPrice: 2000,
       name: "Compressed Concentrated Veldspar",
       shortName: "cCVeld",
     },
     stableVeldspar: {
       volume: 0.15,
+      cminSellPrice: 2000,
       name: "Compressed Stable Veldspar",
       shortName: "cSVeld",
     },
@@ -235,9 +255,201 @@ const spodumainFamily = {
   },
 };
 
+const kerniteFamily = {
+  normal: {
+    kernite: {
+      priceStep: 5,
+      fromBuyPrice: 100,
+      toBuyPrice: 200,
+      volume: 1.2,
+      name: "Kernite",
+      shortName: "Ker",
+    },
+    fieryKernite: {
+      priceStep: 5,
+      fromBuyPrice: 100,
+      toBuyPrice: 200,
+      volume: 1.2,
+      name: "Fiery Kernite",
+      shortName: "FKer",
+    },
+    resplendantKernite: {
+      priceStep: 5,
+      fromBuyPrice: 100,
+      toBuyPrice: 200,
+      volume: 1.2,
+      name: "Resplendant Kernite",
+      shortName: "RKer",
+    },
+    luminousKernite: {
+      priceStep: 5,
+      fromBuyPrice: 100,
+      toBuyPrice: 200,
+      volume: 1.2,
+      name: "Luminous Kernite",
+      shortName: "LKer",
+    },
+  },
+  compresssed: {
+    kernite: {
+      volume: 0.19,
+      cminSellPrice: 24000,
+      name: "Compressed Kernite",
+      shortName: "cKer",
+    },
+    fieryKernite: {
+      volume: 0.19,
+      cminSellPrice: 24000,
+      name: "Compressed Resplendant Kernite",
+      shortName: "cFKer",
+    },
+    resplendantKernite: {
+      volume: 0.19,
+      cminSellPrice: 24000,
+      name: "Compressed Resplendant Kernite",
+      shortName: "cRKer",
+    },
+    luminousKernite: {
+      volume: 0.19,
+      cminSellPrice: 24000,
+      name: "Compressed Luminous Kernite",
+      shortName: "cLKer",
+    },
+  },
+};
+
+const plagioclaseFamily = {
+  normal: {
+    plagioclase: {
+      priceStep: 1,
+      fromBuyPrice: 10,
+      toBuyPrice: 60,
+      volume: 0.35,
+      name: "Plagioclase",
+      shortName: "Pla",
+    },
+    richPlagioclase: {
+      priceStep: 1,
+      fromBuyPrice: 10,
+      toBuyPrice: 60,
+      volume: 0.35,
+      name: "Rich Plagioclase",
+      shortName: "RPla",
+    },
+    azurePlagioclase: {
+      priceStep: 1,
+      fromBuyPrice: 30,
+      toBuyPrice: 60,
+      volume: 0.35,
+      name: "Azure Plagioclase",
+      shortName: "APla",
+    },
+    sparklingPlagioclase: {
+      priceStep: 1,
+      fromBuyPrice: 10,
+      toBuyPrice: 60,
+      volume: 0.35,
+      name: "Sparkling Plagioclase",
+      shortName: "SPla",
+    },
+  },
+  compresssed: {
+    plagioclase: {
+      volume: 0.15,
+      cminSellPrice: 8000,
+      name: "Compressed Plagioclase",
+      shortName: "cPlar",
+    },
+    richPlagioclase: {
+      volume: 0.15,
+      cminSellPrice: 8000,
+      name: "Compressed Rich Plagioclase",
+      shortName: "cRPla",
+    },
+    azurePlagioclase: {
+      volume: 0.15,
+      cminSellPrice: 8000,
+      name: "Compressed Azure Plagioclase",
+      shortName: "cAPla",
+    },
+    sparklingPlagioclase: {
+      volume: 0.15,
+      cminSellPrice: 8000,
+      name: "Compressed Sparkling Plagioclase",
+      shortName: "cSPla",
+    },
+  },
+};
+
+const pyroxeresFamily = {
+  normal: {
+    pyroxeres: {
+      priceStep: 1,
+      fromBuyPrice: 10,
+      toBuyPrice: 60,
+      volume: 0.3,
+      name: "Pyroxeres",
+      shortName: "Pyr",
+    },
+    solidPyroxeres: {
+      priceStep: 1,
+      fromBuyPrice: 20,
+      toBuyPrice: 60,
+      volume: 0.3,
+      name: "Solid Pyroxeres",
+      shortName: "Spyr",
+    },
+    viscousPyroxeres: {
+      priceStep: 1,
+      fromBuyPrice: 10,
+      toBuyPrice: 60,
+      volume: 0.3,
+      name: "Viscous Pyroxeres",
+      shortName: "VPyr",
+    },
+    opulentPyroxeres: {
+      priceStep: 1,
+      fromBuyPrice: 10,
+      toBuyPrice: 60,
+      volume: 0.3,
+      name: "Opulent Pyroxeres",
+      shortName: "OPyr",
+    },
+  },
+  compresssed: {
+    pyroxeres: {
+      volume: 0.16,
+      cminSellPrice: 7000,
+      name: "Compressed Pyroxeres",
+      shortName: "cPyr",
+    },
+    solidPyroxeres: {
+      volume: 0.16,
+      cminSellPrice: 7000,
+      name: "Compressed Solid Pyroxeres",
+      shortName: "cSpyr",
+    },
+    viscousPyroxeres: {
+      volume: 0.16,
+      cminSellPrice: 7000,
+      name: "Compressed Viscous Pyroxeres",
+      shortName: "cVPyr",
+    },
+    opulentPyroxeres: {
+      volume: 0.16,
+      cminSellPrice: 7000,
+      name: "Compressed Opulent Pyroxeres",
+      shortName: "cOPyr",
+    },
+  },
+};
+
 export const minerals = {
   veldsparFamily,
   scorditeFamily,
   omberFamily,
   spodumainFamily,
+  kerniteFamily,
+  plagioclaseFamily,
+  pyroxeresFamily,
 };

@@ -34,15 +34,36 @@ export const BasicInfo = styled("div")({
   padding: "15px",
 });
 
-export const GoodProfit = styled("span")({
-  background: "#01d601",
+export const ExcelenteProfit = styled("span")({
+  background: "#ff00d496",
   width: "50%",
   textAlign: "center",
   display: "inline-block",
 });
 
-export const LossProfit = styled("span")({
-  background: "red",
+export const GoodProfit = styled("span")({
+  background: "#01c301",
+  width: "50%",
+  textAlign: "center",
+  display: "inline-block",
+});
+
+export const MediumProfit = styled("span")({
+  background: "#00ff13",
+  width: "50%",
+  textAlign: "center",
+  display: "inline-block",
+});
+
+export const BadProfit = styled("span")({
+  background: "#f9ff9a",
+  width: "50%",
+  textAlign: "center",
+  display: "inline-block",
+});
+
+export const WeakProfit = styled("span")({
+  background: "#c8ecf7",
   width: "50%",
   textAlign: "center",
   display: "inline-block",

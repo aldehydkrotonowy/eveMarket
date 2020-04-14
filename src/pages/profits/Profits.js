@@ -27,21 +27,6 @@ class Profits extends React.Component {
       return columns;
     }, []);
     this.setState({ radioSectionItems: radioItems });
-
-    // const priceRange = this.generateBuyPriceRagne();
-
-    // priceRange.forEach((rangeForMineral) => {
-    //   const newProps = {
-    //     pricesRange: [...rangeForMineral.range],
-    //   };
-    //   console.log("dddddddddddddddddd");
-    //   setTimeout(() => {
-    //     this.updateMineral({
-    //       updater: newProps,
-    //       mineralName: rangeForMineral.name,
-    //     });
-    //   }, 10);
-    // });
   }
 
   // ---------------------------------------------------------------------- handlers
@@ -78,24 +63,6 @@ class Profits extends React.Component {
     };
     this.setState({ ...newState }, () => console.log({ newState: this.state }));
   };
-
-  // generateBuyPriceRagne = () => {
-  //   const { minerals } = this.state;
-  //   const pricesRanges = Object.values(minerals).map((mineral) => {
-  //     const { priceStep, fromBuyPrice, toBuyPrice, name } = mineral;
-
-  //     let range = [fromBuyPrice];
-  //     let currentPrice = fromBuyPrice;
-  //     do {
-  //       currentPrice += priceStep;
-  //       range.push(currentPrice);
-  //     } while (currentPrice <= toBuyPrice);
-
-  //     return { name: name, range };
-  //   });
-
-  //   return pricesRanges;
-  // };
 
   render() {
     const { radioSelected, minerals } = this.state;

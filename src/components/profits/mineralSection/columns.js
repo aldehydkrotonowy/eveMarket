@@ -10,9 +10,34 @@ import FilterList from "@material-ui/icons/FilterList";
 import Remove from "@material-ui/icons/Remove";
 import { roundedNum } from "../../../utils/utils";
 import FormatedNum from "../../shared/FormatedNum";
-import { GoodProfit, LossProfit } from "./mineralSectionStyle";
+import {
+  ExcelenteProfit,
+  GoodProfit,
+  MediumProfit,
+  BadProfit,
+  WeakProfit,
+} from "./mineralSectionStyle";
 
 export const columns = [
+  {
+    title: "Profit %",
+    field: "profitP",
+    editable: "never",
+    render: (props) => {
+      const value = roundedNum(props.profitP, 2);
+      if (value >= 100) {
+        return <ExcelenteProfit>{value.toFixed(2)}</ExcelenteProfit>;
+      } else if (value < 100 && value > 60) {
+        return <GoodProfit>{value.toFixed(2)}</GoodProfit>;
+      } else if (value <= 60 && value > 30) {
+        return <MediumProfit>{value.toFixed(2)}</MediumProfit>;
+      } else if (value <= 30 && value > 10) {
+        return <BadProfit>{value.toFixed(2)}</BadProfit>;
+      } else if (value <= 10) {
+        return <WeakProfit>{value.toFixed(2)}</WeakProfit>;
+      }
+    },
+  },
   { title: "Buy price", field: "rawminBuyPrice", editable: "always" },
   {
     title: "Total cost",
@@ -98,21 +123,6 @@ export const columns = [
     editable: "never",
     render: (props) => {
       return <FormatedNum value={props.profit} precision={0} postfix=" ISK" />;
-    },
-  },
-  {
-    title: "Profit %",
-    field: "profitP",
-    editable: "never",
-    render: (props) => {
-      const value = roundedNum(props.profitP, 2);
-      if (value > 10) {
-        return <GoodProfit>{value.toFixed(2)}</GoodProfit>;
-      } else if (value < 10) {
-        return <LossProfit>{value.toFixed(2)}</LossProfit>;
-      } else {
-        return "?";
-      }
     },
   },
 ];
