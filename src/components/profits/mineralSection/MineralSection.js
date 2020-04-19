@@ -20,7 +20,7 @@ import {
   TableTitle,
 } from "./mineralSectionStyle";
 
-import { BROKER_FEE_RATE, TAX_RATE } from "../../../helpers/minerals";
+import { BROKER_FEE_RATE, TAX_RATE } from "../../../assets/minerals";
 
 const generateRows = (mineralData = {}, pricesRange = []) => {
   if (isEmpty(mineralData) || isEmpty(pricesRange)) return [];

@@ -1,0 +1,680 @@
+{
+  "Azure Plagioclase": [
+    {
+      "volume_remain": 1866,
+      "price": 52,
+      "duration": 90,
+      "systemName": "Samanuni",
+      "regionName": "Black Rise",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 14285,
+      "price": 53.03,
+      "duration": 7,
+      "systemName": "Oursulaert",
+      "regionName": "Essence",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 2870,
+      "price": 53.31,
+      "duration": 3,
+      "systemName": "Mesybier",
+      "regionName": "Essence",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 14285,
+      "price": 55,
+      "duration": 30,
+      "systemName": "Stacmon",
+      "regionName": "Placid",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 1025,
+      "price": 0.05,
+      "duration": 3,
+      "systemName": "Orvolle",
+      "regionName": "Placid",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 9297,
+      "price": 55,
+      "duration": 90,
+      "systemName": "Brapelille",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 7892,
+      "price": 55,
+      "duration": 1,
+      "systemName": "Vittenyn",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 5890,
+      "price": 56.57,
+      "duration": 14,
+      "systemName": "Vittenyn",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 7103,
+      "price": 58,
+      "duration": 90,
+      "systemName": "Ethernity",
+      "regionName": "Everyshore",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 10436,
+      "price": 56.87,
+      "duration": 90,
+      "systemName": "Finanar",
+      "regionName": "Metropolis",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 17012,
+      "price": 58,
+      "duration": 14,
+      "systemName": "Algogille",
+      "regionName": "Essence",
+      "inventoryName": "Azure Plagioclase"
+    },
+    {
+      "volume_remain": 11602,
+      "price": 55,
+      "duration": 30,
+      "systemName": "Gulfonodi",
+      "regionName": "Molden Heath",
+      "inventoryName": "Azure Plagioclase"
+    }
+  ],
+  "Condensed Scordite": [
+    {
+      "volume_remain": 75374,
+      "price": 25,
+      "duration": 30,
+      "systemName": "Gulfonodi",
+      "regionName": "Molden Heath",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 35300,
+      "price": 24,
+      "duration": 3,
+      "systemName": "Mora",
+      "regionName": "Kor-Azor",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 43217,
+      "price": 24,
+      "duration": 90,
+      "systemName": "Osvestmunnur",
+      "regionName": "Metropolis",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 17504,
+      "price": 20,
+      "duration": 30,
+      "systemName": "Orvolle",
+      "regionName": "Placid",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 17913,
+      "price": 24.65,
+      "duration": 7,
+      "systemName": "Tash-Murkon Prime",
+      "regionName": "Tash-Murkon",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 106629,
+      "price": 24.66,
+      "duration": 7,
+      "systemName": "Pasha",
+      "regionName": "Tash-Murkon",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 14218,
+      "price": 25,
+      "duration": 3,
+      "systemName": "Hatakani",
+      "regionName": "The Citadel",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 1245,
+      "price": 25,
+      "duration": 3,
+      "systemName": "Aokannitoh",
+      "regionName": "The Forge",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 183922,
+      "price": 25.01,
+      "duration": 1,
+      "systemName": "Deepari",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 11133,
+      "price": 25.01,
+      "duration": 7,
+      "systemName": "Arbaz",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 33333,
+      "price": 25.01,
+      "duration": 7,
+      "systemName": "Arbaz",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 33333,
+      "price": 25.01,
+      "duration": 7,
+      "systemName": "Arbaz",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 218238,
+      "price": 25.01,
+      "duration": 90,
+      "systemName": "Ekuenbiron",
+      "regionName": "Verge Vendor",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 660273,
+      "price": 29,
+      "duration": 90,
+      "systemName": "Rens",
+      "regionName": "Heimatar",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 7936,
+      "price": 28.95,
+      "duration": 7,
+      "systemName": "Ameinaka",
+      "regionName": "Heimatar",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 156306,
+      "price": 27,
+      "duration": 3,
+      "systemName": "Ammold",
+      "regionName": "Heimatar",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 25399,
+      "price": 29.5,
+      "duration": 7,
+      "systemName": "Ashab",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 33333,
+      "price": 28.5,
+      "duration": 30,
+      "systemName": "Deepari",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 7546,
+      "price": 28.75,
+      "duration": 30,
+      "systemName": "Deepari",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 9778,
+      "price": 25.01,
+      "duration": 14,
+      "systemName": "Clellinon",
+      "regionName": "Verge Vendor",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 37311,
+      "price": 25.05,
+      "duration": 7,
+      "systemName": "Kehour",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 33333,
+      "price": 29,
+      "duration": 90,
+      "systemName": "Grinacanne",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 10000,
+      "price": 25.38,
+      "duration": 90,
+      "systemName": "Dodixie",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 45788,
+      "price": 28,
+      "duration": 14,
+      "systemName": "Dodixie",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 23630,
+      "price": 26,
+      "duration": 7,
+      "systemName": "Pulin",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 31591,
+      "price": 25.05,
+      "duration": 90,
+      "systemName": "Chaven",
+      "regionName": "Domain",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 285485,
+      "price": 29,
+      "duration": 7,
+      "systemName": "Duripant",
+      "regionName": "Essence",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 1332606,
+      "price": 28,
+      "duration": 3,
+      "systemName": "Isaziwa",
+      "regionName": "The Citadel",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 188842,
+      "price": 29,
+      "duration": 3,
+      "systemName": "Duripant",
+      "regionName": "Essence",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 3669,
+      "price": 29,
+      "duration": 90,
+      "systemName": "Couster",
+      "regionName": "Essence",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 1793,
+      "price": 27.81,
+      "duration": 3,
+      "systemName": "Uitra",
+      "regionName": "The Forge",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 5857,
+      "price": 29.51,
+      "duration": 1,
+      "systemName": "Uitra",
+      "regionName": "The Forge",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 7040,
+      "price": 28,
+      "duration": 90,
+      "systemName": "Odatrik",
+      "regionName": "Heimatar",
+      "inventoryName": "Condensed Scordite"
+    },
+    {
+      "volume_remain": 130772,
+      "price": 26,
+      "duration": 90,
+      "systemName": "Osvestmunnur",
+      "regionName": "Metropolis",
+      "inventoryName": "Condensed Scordite"
+    }
+  ],
+  "Dense Veldspar": [
+    {
+      "volume_remain": 10624,
+      "price": 20.03,
+      "duration": 1,
+      "systemName": "Duripant",
+      "regionName": "Essence",
+      "inventoryName": "Dense Veldspar"
+    },
+    {
+      "volume_remain": 3726,
+      "price": 21.2,
+      "duration": 7,
+      "systemName": "Gulfonodi",
+      "regionName": "Molden Heath",
+      "inventoryName": "Dense Veldspar"
+    },
+    {
+      "volume_remain": 25696,
+      "price": 21,
+      "duration": 90,
+      "systemName": "Adacyne",
+      "regionName": "Placid",
+      "inventoryName": "Dense Veldspar"
+    },
+    {
+      "volume_remain": 3152,
+      "price": 18.16,
+      "duration": 7,
+      "systemName": "Hatori",
+      "regionName": "The Bleak Lands",
+      "inventoryName": "Dense Veldspar"
+    }
+  ],
+  "Fiery Kernite": [
+    {
+      "volume_remain": 4083,
+      "price": 130,
+      "duration": 90,
+      "systemName": "Esescama",
+      "regionName": "Devoid",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 3191,
+      "price": 150,
+      "duration": 30,
+      "systemName": "Dihra",
+      "regionName": "Devoid",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 1745,
+      "price": 140,
+      "duration": 7,
+      "systemName": "Dihra",
+      "regionName": "Devoid",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 3860,
+      "price": 136.1,
+      "duration": 90,
+      "systemName": "Sukirah",
+      "regionName": "Domain",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 1088,
+      "price": 136.1,
+      "duration": 3,
+      "systemName": "Gaha",
+      "regionName": "Domain",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 1400,
+      "price": 136.1,
+      "duration": 3,
+      "systemName": "Esteban",
+      "regionName": "Domain",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 6150,
+      "price": 136.1,
+      "duration": 14,
+      "systemName": "Youl",
+      "regionName": "Domain",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 1040,
+      "price": 132.1,
+      "duration": 90,
+      "systemName": "Romi",
+      "regionName": "Kador",
+      "inventoryName": "Fiery Kernite"
+    },
+    {
+      "volume_remain": 55315,
+      "price": 160,
+      "duration": 3,
+      "systemName": "Asesamy",
+      "regionName": "Tash-Murkon",
+      "inventoryName": "Fiery Kernite"
+    }
+  ],
+  "Golden Omber": [
+    {
+      "volume_remain": 1672,
+      "price": 64.6,
+      "duration": 90,
+      "systemName": "Arnon",
+      "regionName": "Essence",
+      "inventoryName": "Golden Omber"
+    },
+    {
+      "volume_remain": 1131,
+      "price": 63,
+      "duration": 90,
+      "systemName": "Couster",
+      "regionName": "Essence",
+      "inventoryName": "Golden Omber"
+    },
+    {
+      "volume_remain": 1235,
+      "price": 50,
+      "duration": 90,
+      "systemName": "Sigga",
+      "regionName": "Genesis",
+      "inventoryName": "Golden Omber"
+    },
+    {
+      "volume_remain": 1804,
+      "price": 57,
+      "duration": 90,
+      "systemName": "Gulfonodi",
+      "regionName": "Molden Heath",
+      "inventoryName": "Golden Omber"
+    },
+    {
+      "volume_remain": 1613,
+      "price": 54.61,
+      "duration": 30,
+      "systemName": "Dodixie",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Golden Omber"
+    }
+  ],
+  "Pristine Jaspet": [
+    {
+      "volume_remain": 4202,
+      "price": 493.99,
+      "duration": 90,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 1999,
+      "price": 440,
+      "duration": 90,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 3356,
+      "price": 390,
+      "duration": 90,
+      "systemName": "Baviasi",
+      "regionName": "Tash-Murkon",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 8206,
+      "price": 440.2,
+      "duration": 90,
+      "systemName": "Goni",
+      "regionName": "Tash-Murkon",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 1142,
+      "price": 469,
+      "duration": 14,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 21450,
+      "price": 449,
+      "duration": 90,
+      "systemName": "Abagawa",
+      "regionName": "The Forge",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 2976,
+      "price": 499.93,
+      "duration": 90,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 1498,
+      "price": 493.94,
+      "duration": 90,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 7270,
+      "price": 493.9,
+      "duration": 90,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 1034,
+      "price": 470,
+      "duration": 90,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 1501,
+      "price": 449.8,
+      "duration": 90,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 2263,
+      "price": 449.8,
+      "duration": 90,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Pristine Jaspet"
+    },
+    {
+      "volume_remain": 2434,
+      "price": 495.95,
+      "duration": 90,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Pristine Jaspet"
+    }
+  ],
+  "Pyroxeres": [
+    {
+      "volume_remain": 83449,
+      "price": 40,
+      "duration": 1,
+      "systemName": "Onnamon",
+      "regionName": "Black Rise",
+      "inventoryName": "Pyroxeres"
+    },
+    {
+      "volume_remain": 57798,
+      "price": 48.01,
+      "duration": 3,
+      "systemName": "Tar",
+      "regionName": "Genesis",
+      "inventoryName": "Pyroxeres"
+    },
+    {
+      "volume_remain": 4569,
+      "price": 41.02,
+      "duration": 30,
+      "systemName": "Inaro",
+      "regionName": "The Citadel",
+      "inventoryName": "Pyroxeres"
+    },
+    {
+      "volume_remain": 52510,
+      "price": 39,
+      "duration": 90,
+      "systemName": "Hatakani",
+      "regionName": "The Citadel",
+      "inventoryName": "Pyroxeres"
+    },
+    {
+      "volume_remain": 10678,
+      "price": 39,
+      "duration": 90,
+      "systemName": "Hatakani",
+      "regionName": "The Citadel",
+      "inventoryName": "Pyroxeres"
+    },
+    {
+      "volume_remain": 8326,
+      "price": 46.17,
+      "duration": 1,
+      "systemName": "Clellinon",
+      "regionName": "Verge Vendor",
+      "inventoryName": "Pyroxeres"
+    }
+  ]
+}

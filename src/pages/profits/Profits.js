@@ -1,5 +1,5 @@
 import React from "react";
-import { minerals } from "../../helpers/minerals";
+import { minerals } from "../../assets/minerals";
 import RadioSection from "../../components/profits/radioSection/RadioSection";
 import TaxesAndBrokerFees from "../../components/shared/TaxesAndBrokerFees";
 import { mineralDefs } from "./mineralDefs";

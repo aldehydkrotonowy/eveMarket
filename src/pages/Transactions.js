@@ -1,7 +1,7 @@
 import React from "react";
 
-import { transactions } from "../helpers/transactions";
-import { BROKER_FEE_RATE, TAX_RATE } from "../helpers/minerals";
+import { transactions } from "../assets/transactions";
+import { BROKER_FEE_RATE, TAX_RATE } from "../assets/minerals";
 import TransactionTable from "../components/transactions/transactionTable/transactionTable/TransactionTable";
 import Legend from "../components/transactions/transactionTable/legend/Legend";
 

@@ -11,6 +11,8 @@ export const SHORT_SOLID_PYROXERES = "SPy";
 export const SHORT_LUMINOUS_KERNITE = "LKer";
 export const SHORT_FIERY_KERNITE = "FKer";
 export const SHORT_KERNITE = "Ker";
+export const SHORT_STABLE_VELDSPARE = "SV";
+export const SHORT_CONCENTRATED_VELDSPARE = "CV";
 
 export const BROKER_FEE_RATE = 0.04404193632;
 export const TAX_RATE = 0.05;
@@ -63,7 +65,7 @@ const omberFamily = {
     },
     goldenOmber: {
       volume: 0.3,
-      cminSellPrice: 11000,
+      cminSellPrice: 9000,
       name: "Compressed Golden Omber",
       shortName: "cGOmb",
     },
@@ -183,7 +185,7 @@ const veldsparFamily = {
   compresssed: {
     veldspar: {
       volume: 0.15,
-      cminSellPrice: 2000,
+      cminSellPrice: 3000,
       name: "Compressed Veldspar",
       shortName: "cVeld",
     },
@@ -444,6 +446,69 @@ const pyroxeresFamily = {
   },
 };
 
+const gneissFamily = {
+  normal: {
+    gneiss: {
+      priceStep: 20,
+      fromBuyPrice: 1700,
+      toBuyPrice: 2000,
+      volume: 5,
+      name: "Gneiss",
+      shortName: "Gns",
+    },
+    brilliantGneiss: {
+      priceStep: 50,
+      fromBuyPrice: 700,
+      toBuyPrice: 2000,
+      volume: 5,
+      name: "Brilliant Gneiss",
+      shortName: "BGns",
+    },
+    iridescentGneiss: {
+      priceStep: 5,
+      fromBuyPrice: 20,
+      toBuyPrice: 100,
+      volume: 5,
+      name: "Iridescent Gneiss",
+      shortName: "IGns",
+    },
+    prismaticGneiss: {
+      priceStep: 5,
+      fromBuyPrice: 20,
+      toBuyPrice: 100,
+      volume: 5,
+      name: "Prismatic Gneiss",
+      shortName: "PGns",
+    },
+  },
+  compresssed: {
+    gneiss: {
+      volume: 1.8,
+      cminSellPrice: 175000,
+      name: "Compressed Omber",
+      shortName: "cGns",
+    },
+    brilliantGneiss: {
+      volume: 1.8,
+      cminSellPrice: 180000,
+      name: "Compressed Brilliant Gneiss",
+      shortName: "cBGns",
+    },
+    iridescentGneiss: {
+      volume: 1.8,
+      cminSellPrice: 11000,
+      name: "Compressed Iridescent Gneiss",
+      shortName: "cIGns",
+    },
+    prismaticGneiss: {
+      volume: 1.8,
+      cminSellPrice: 11000,
+      name: "Compressed Prismatic Gneiss",
+      shortName: "cPGns",
+    },
+  },
+};
+
 export const minerals = {
   veldsparFamily,
   scorditeFamily,
@@ -452,4 +517,5 @@ export const minerals = {
   kerniteFamily,
   plagioclaseFamily,
   pyroxeresFamily,
+  gneissFamily,
 };

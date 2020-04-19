@@ -1,5 +1,5 @@
 import React from "react";
-import { BROKER_FEE_RATE, TAX_RATE } from "../../helpers/minerals";
+import { BROKER_FEE_RATE, TAX_RATE } from "../../assets/minerals";
 import { styled } from "@material-ui/core/styles";
 
 const InfoWrapper = styled("div")({

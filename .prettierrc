@@ -1,3 +1,12 @@
 {
-  "lineWidth": 250
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "flow"
+      }
+    }
+  ],
+  "lineWidth": 200,
+  "arrow-body-style": ["error", "as-needed"]
 }

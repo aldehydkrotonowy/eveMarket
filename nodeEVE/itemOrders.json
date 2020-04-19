@@ -1,0 +1,955 @@
+{
+  "Antimatter Charge L": {
+    "bestSell": {
+      "volume_remain": 71360,
+      "price": 120.1,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Hodrold",
+      "regionName": "Metropolis",
+      "inventoryName": "Antimatter Charge L"
+    },
+    "bestBuy": {
+      "volume_remain": 19200,
+      "price": 185,
+      "duration": 30,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Antimatter Charge L"
+    },
+    "profit": 1246080
+  },
+  "Antimatter Charge M": {
+    "bestSell": {
+      "volume_remain": 13519,
+      "price": 50,
+      "duration": 7,
+      "is_buy_order": false,
+      "systemName": "Misha",
+      "regionName": "Kor-Azor",
+      "inventoryName": "Antimatter Charge M"
+    },
+    "bestBuy": {
+      "volume_remain": 49800,
+      "price": 63.47,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Antimatter Charge M"
+    },
+    "profit": 182100.92999999993
+  },
+  "Antimatter Charge S": {
+    "bestSell": {
+      "volume_remain": 23686,
+      "price": 21,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Audaerne",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Antimatter Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 574310,
+      "price": 25.2,
+      "duration": 30,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Antimatter Charge S"
+    },
+    "profit": 99481.19999999995
+  },
+  "Iridium Charge L": {
+    "bestSell": {
+      "volume_remain": 8000,
+      "price": 38,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Chanoun",
+      "regionName": "Kador",
+      "inventoryName": "Iridium Charge L"
+    },
+    "bestBuy": {
+      "volume_remain": 80268,
+      "price": 27.18,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Perimeter",
+      "regionName": "The Forge",
+      "inventoryName": "Iridium Charge L"
+    },
+    "profit": -86560
+  },
+  "Iridium Charge M": {
+    "bestSell": {
+      "volume_remain": 10000,
+      "price": 24,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Scheenins",
+      "regionName": "Verge Vendor",
+      "inventoryName": "Iridium Charge M"
+    },
+    "bestBuy": {
+      "volume_remain": 8400,
+      "price": 32,
+      "duration": 3,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Iridium Charge M"
+    },
+    "profit": 67200
+  },
+  "Iridium Charge S": {
+    "bestSell": {
+      "volume_remain": 2000,
+      "price": 3.53,
+      "duration": 14,
+      "is_buy_order": false,
+      "systemName": "Irnin",
+      "regionName": "Domain",
+      "inventoryName": "Iridium Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 5279,
+      "price": 5.05,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Josameto",
+      "regionName": "The Forge",
+      "inventoryName": "Iridium Charge S"
+    },
+    "profit": 3040
+  },
+  "Iron Charge L": {
+    "bestSell": {
+      "volume_remain": 99000,
+      "price": 29,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Friggi",
+      "regionName": "The Forge",
+      "inventoryName": "Iron Charge L"
+    },
+    "bestBuy": {
+      "volume_remain": 10000,
+      "price": 20,
+      "duration": 14,
+      "is_buy_order": true,
+      "systemName": "Vylade",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Iron Charge L"
+    },
+    "profit": -90000
+  },
+  "Iron Charge M": {
+    "bestSell": {
+      "volume_remain": 8000,
+      "price": 14.95,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Imya",
+      "regionName": "Genesis",
+      "inventoryName": "Iron Charge M"
+    },
+    "bestBuy": {
+      "volume_remain": 8598,
+      "price": 15,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Kaimon",
+      "regionName": "The Citadel",
+      "inventoryName": "Iron Charge M"
+    },
+    "profit": 400
+  },
+  "Iron Charge S": {
+    "bestSell": {
+      "volume_remain": 2100,
+      "price": 4,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Gelfiven",
+      "regionName": "Molden Heath",
+      "inventoryName": "Iron Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 1500,
+      "price": 9.5,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Harerget",
+      "regionName": "Everyshore",
+      "inventoryName": "Iron Charge S"
+    },
+    "profit": 8250
+  },
+  "Lead Charge L": {
+    "bestSell": {
+      "volume_remain": 8420,
+      "price": 41,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Oursulaert",
+      "regionName": "Essence",
+      "inventoryName": "Lead Charge L"
+    },
+    "bestBuy": {
+      "volume_remain": 75680,
+      "price": 27.02,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Perimeter",
+      "regionName": "The Forge",
+      "inventoryName": "Lead Charge L"
+    },
+    "profit": -117711.6
+  },
+  "Lead Charge M": {
+    "bestSell": {
+      "volume_remain": 1326,
+      "price": 27,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Audaerne",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Lead Charge M"
+    },
+    "bestBuy": {
+      "volume_remain": 749086,
+      "price": 37.01,
+      "duration": 14,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Lead Charge M"
+    },
+    "profit": 13273.259999999995
+  },
+  "Lead Charge S": {
+    "bestSell": {
+      "volume_remain": 47850,
+      "price": 5,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Rens",
+      "regionName": "Heimatar",
+      "inventoryName": "Lead Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 244727,
+      "price": 5.77,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Lead Charge S"
+    },
+    "profit": 36844.5
+  },
+  "Plutonium Charge L": {
+    "bestSell": {
+      "volume_remain": 16627,
+      "price": 79.95,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Agal",
+      "regionName": "Genesis",
+      "inventoryName": "Plutonium Charge L"
+    },
+    "bestBuy": {
+      "volume_remain": 23342,
+      "price": 63.07,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Plutonium Charge L"
+    },
+    "profit": -280663.76000000024
+  },
+  "Plutonium Charge M": {
+    "bestSell": {
+      "volume_remain": 23000,
+      "price": 28,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Synchelle",
+      "regionName": "Essence",
+      "inventoryName": "Plutonium Charge M"
+    },
+    "bestBuy": {
+      "volume_remain": 7800,
+      "price": 36.63,
+      "duration": 7,
+      "is_buy_order": true,
+      "systemName": "Niyabainen",
+      "regionName": "The Forge",
+      "inventoryName": "Plutonium Charge M"
+    },
+    "profit": 67314
+  },
+  "Plutonium Charge S": {
+    "bestSell": {
+      "volume_remain": 74412,
+      "price": 10,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Algasienan",
+      "regionName": "Placid",
+      "inventoryName": "Plutonium Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 3000,
+      "price": 17.28,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Jufvitte",
+      "regionName": "Verge Vendor",
+      "inventoryName": "Plutonium Charge S"
+    },
+    "profit": 21840
+  },
+  "Thorium Charge L": {
+    "bestSell": {
+      "volume_remain": 17100,
+      "price": 99.1,
+      "duration": 7,
+      "is_buy_order": false,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Thorium Charge L"
+    },
+    "bestBuy": {
+      "volume_remain": 16428,
+      "price": 75.11,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Thorium Charge L"
+    },
+    "profit": -394107.71999999974
+  },
+  "Thorium Charge M": {
+    "bestSell": {
+      "volume_remain": 11333,
+      "price": 48.65,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Dumkirinur",
+      "regionName": "Heimatar",
+      "inventoryName": "Thorium Charge M"
+    },
+    "bestBuy": {
+      "volume_remain": 14139,
+      "price": 45.95,
+      "duration": 7,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Thorium Charge M"
+    },
+    "profit": -30599.09999999992
+  },
+  "Thorium Charge S": {
+    "bestSell": {
+      "volume_remain": 56150,
+      "price": 5,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Nakatre",
+      "regionName": "Devoid",
+      "inventoryName": "Thorium Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 5095,
+      "price": 6.03,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Clellinon",
+      "regionName": "Verge Vendor",
+      "inventoryName": "Thorium Charge S"
+    },
+    "profit": 5247.850000000002
+  },
+  "Tungsten Charge S": {
+    "bestSell": {
+      "volume_remain": 695141,
+      "price": 4.95,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Agal",
+      "regionName": "Genesis",
+      "inventoryName": "Tungsten Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 9300,
+      "price": 5,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Kaimon",
+      "regionName": "The Citadel",
+      "inventoryName": "Tungsten Charge S"
+    },
+    "profit": 465
+  },
+  "Uranium Charge L": {
+    "bestSell": {
+      "volume_remain": 4991,
+      "price": 99,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Duripant",
+      "regionName": "Essence",
+      "inventoryName": "Uranium Charge L"
+    },
+    "bestBuy": {
+      "volume_remain": 18760,
+      "price": 73.05,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Uranium Charge L"
+    },
+    "profit": -129516.45000000001
+  },
+  "Uranium Charge M": {
+    "bestSell": {
+      "volume_remain": 6100,
+      "price": 27.5,
+      "duration": 14,
+      "is_buy_order": false,
+      "systemName": "Hatori",
+      "regionName": "The Bleak Lands",
+      "inventoryName": "Uranium Charge M"
+    },
+    "bestBuy": {
+      "volume_remain": 87885,
+      "price": 38.18,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Uranium Charge M"
+    },
+    "profit": 65148
+  },
+  "Uranium Charge S": {
+    "bestSell": {
+      "volume_remain": 32000,
+      "price": 8,
+      "duration": 7,
+      "is_buy_order": false,
+      "systemName": "Diaderi",
+      "regionName": "Genesis",
+      "inventoryName": "Uranium Charge S"
+    },
+    "bestBuy": {
+      "volume_remain": 1150,
+      "price": 13.61,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Ikao",
+      "regionName": "The Citadel",
+      "inventoryName": "Uranium Charge S"
+    },
+    "profit": 6451.5
+  },
+  "Inferno Auto-Targeting Cruise Missile I": {
+    "bestSell": {
+      "volume_remain": 2000,
+      "price": 199,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Dodixie",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Inferno Auto-Targeting Cruise Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 49500,
+      "price": 223.4,
+      "duration": 3,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Inferno Auto-Targeting Cruise Missile I"
+    },
+    "profit": 48800
+  },
+  "Inferno Auto-Targeting Heavy Missile I": {
+    "bestSell": {
+      "volume_remain": 58804,
+      "price": 80,
+      "duration": 3,
+      "is_buy_order": false,
+      "systemName": "Hek",
+      "regionName": "Metropolis",
+      "inventoryName": "Inferno Auto-Targeting Heavy Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 1500,
+      "price": 80.02,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Inferno Auto-Targeting Heavy Missile I"
+    },
+    "profit": 30
+  },
+  "Inferno Auto-Targeting Light Missile I": {
+    "bestSell": {
+      "volume_remain": 54986,
+      "price": 6.8,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Eldulf",
+      "regionName": "Molden Heath",
+      "inventoryName": "Inferno Auto-Targeting Light Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 970296,
+      "price": 8.13,
+      "duration": 3,
+      "is_buy_order": true,
+      "systemName": "Perimeter",
+      "regionName": "The Forge",
+      "inventoryName": "Inferno Auto-Targeting Light Missile I"
+    },
+    "profit": 73131.38000000006
+  },
+  "Mjolnir Auto-Targeting Cruise Missile I": {
+    "bestSell": {
+      "volume_remain": 458355,
+      "price": 195,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Mjolnir Auto-Targeting Cruise Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 47600,
+      "price": 125.1,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Mjolnir Auto-Targeting Cruise Missile I"
+    },
+    "profit": -3327240
+  },
+  "Mjolnir Auto-Targeting Heavy Missile I": {
+    "bestSell": {
+      "volume_remain": 7300,
+      "price": 49.61,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Eredan",
+      "regionName": "Devoid",
+      "inventoryName": "Mjolnir Auto-Targeting Heavy Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 13034,
+      "price": 60.08,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Amarr",
+      "regionName": "Domain",
+      "inventoryName": "Mjolnir Auto-Targeting Heavy Missile I"
+    },
+    "profit": 76431
+  },
+  "Mjolnir Auto-Targeting Light Missile I": {
+    "bestSell": {
+      "volume_remain": 24861,
+      "price": 18.5,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Suroken",
+      "regionName": "The Citadel",
+      "inventoryName": "Mjolnir Auto-Targeting Light Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 1028590,
+      "price": 20.32,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Mjolnir Auto-Targeting Light Missile I"
+    },
+    "profit": 45247.02000000002
+  },
+  "Nova Auto-Targeting Cruise Missile I": {
+    "bestSell": {
+      "volume_remain": 4000,
+      "price": 144.8,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Nova Auto-Targeting Cruise Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 1845927,
+      "price": 80,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Nova Auto-Targeting Cruise Missile I"
+    },
+    "profit": -259200
+  },
+  "Nova Auto-Targeting Heavy Missile I": {
+    "bestSell": {
+      "volume_remain": 1800,
+      "price": 40,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Pimebeka",
+      "regionName": "Tash-Murkon",
+      "inventoryName": "Nova Auto-Targeting Heavy Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 49800,
+      "price": 50,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Orduin",
+      "regionName": "Metropolis",
+      "inventoryName": "Nova Auto-Targeting Heavy Missile I"
+    },
+    "profit": 18000
+  },
+  "Nova Auto-Targeting Light Missile I": {
+    "bestSell": {
+      "volume_remain": 10000,
+      "price": 9.2,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Alikara",
+      "regionName": "The Citadel",
+      "inventoryName": "Nova Auto-Targeting Light Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 918429,
+      "price": 11.04,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Nova Auto-Targeting Light Missile I"
+    },
+    "profit": 18399.999999999985
+  },
+  "Scourge Auto-Targeting Cruise Missile I": {
+    "bestSell": {
+      "volume_remain": 5000,
+      "price": 140.4,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Eredan",
+      "regionName": "Devoid",
+      "inventoryName": "Scourge Auto-Targeting Cruise Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 45000,
+      "price": 150,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Mies",
+      "regionName": "Essence",
+      "inventoryName": "Scourge Auto-Targeting Cruise Missile I"
+    },
+    "profit": 48000
+  },
+  "Scourge Auto-Targeting Heavy Missile I": {
+    "bestSell": {
+      "volume_remain": 4500,
+      "price": 50,
+      "duration": 7,
+      "is_buy_order": false,
+      "systemName": "Bille",
+      "regionName": "Everyshore",
+      "inventoryName": "Scourge Auto-Targeting Heavy Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 49700,
+      "price": 99,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Orduin",
+      "regionName": "Metropolis",
+      "inventoryName": "Scourge Auto-Targeting Heavy Missile I"
+    },
+    "profit": 220500
+  },
+  "Scourge Auto-Targeting Light Missile I": {
+    "bestSell": {
+      "volume_remain": 897625,
+      "price": 14.99,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Hogimo",
+      "regionName": "The Citadel",
+      "inventoryName": "Scourge Auto-Targeting Light Missile I"
+    },
+    "bestBuy": {
+      "volume_remain": 245005,
+      "price": 16.05,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Dodixie",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Scourge Auto-Targeting Light Missile I"
+    },
+    "profit": 259705.2999999998
+  },
+  "Carbonized Lead S": {
+    "bestSell": {
+      "volume_remain": 4691,
+      "price": 2,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Chaven",
+      "regionName": "Domain",
+      "inventoryName": "Carbonized Lead S"
+    },
+    "bestBuy": {
+      "volume_remain": 9000,
+      "price": 4.5,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Embod",
+      "regionName": "Metropolis",
+      "inventoryName": "Carbonized Lead S"
+    },
+    "profit": 11727.5
+  },
+  "Depleted Uranium S": {
+    "bestSell": {
+      "volume_remain": 144840,
+      "price": 7.99,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Depleted Uranium S"
+    },
+    "bestBuy": {
+      "volume_remain": 95424,
+      "price": 6.44,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Ashab",
+      "regionName": "Domain",
+      "inventoryName": "Depleted Uranium S"
+    },
+    "profit": -147907.19999999995
+  },
+  "EMP S": {
+    "bestSell": {
+      "volume_remain": 34800,
+      "price": 19,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Uhodoh",
+      "regionName": "Tash-Murkon",
+      "inventoryName": "EMP S"
+    },
+    "bestBuy": {
+      "volume_remain": 1500,
+      "price": 31.2,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Teonusude",
+      "regionName": "Molden Heath",
+      "inventoryName": "EMP S"
+    },
+    "profit": 18300
+  },
+  "Fusion S": {
+    "bestSell": {
+      "volume_remain": 36700,
+      "price": 13,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Erindur",
+      "regionName": "Metropolis",
+      "inventoryName": "Fusion S"
+    },
+    "bestBuy": {
+      "volume_remain": 901773,
+      "price": 13.76,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Fusion S"
+    },
+    "profit": 27892
+  },
+  "Inferno Light Missile": {
+    "bestSell": {
+      "volume_remain": 8000,
+      "price": 8.81,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Konora",
+      "regionName": "Metropolis",
+      "inventoryName": "Inferno Light Missile"
+    },
+    "bestBuy": {
+      "volume_remain": 8400,
+      "price": 10.7,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Inferno Light Missile"
+    },
+    "profit": 15120
+  },
+  "Mjolnir Light Missile": {
+    "bestSell": {
+      "volume_remain": 8500,
+      "price": 15,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Gergish",
+      "regionName": "Genesis",
+      "inventoryName": "Mjolnir Light Missile"
+    },
+    "bestBuy": {
+      "volume_remain": 470915,
+      "price": 20.09,
+      "duration": 30,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Mjolnir Light Missile"
+    },
+    "profit": 43265
+  },
+  "Nuclear S": {
+    "bestSell": {
+      "volume_remain": 1200,
+      "price": 2,
+      "duration": 14,
+      "is_buy_order": false,
+      "systemName": "Irnin",
+      "regionName": "Domain",
+      "inventoryName": "Nuclear S"
+    },
+    "bestBuy": {
+      "volume_remain": 2000,
+      "price": 5,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Hadaugago",
+      "regionName": "Heimatar",
+      "inventoryName": "Nuclear S"
+    },
+    "profit": 3600
+  },
+  "Phased Plasma S": {
+    "bestSell": {
+      "volume_remain": 44480,
+      "price": 1.01,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Tar",
+      "regionName": "Genesis",
+      "inventoryName": "Phased Plasma S"
+    },
+    "bestBuy": {
+      "volume_remain": 12528,
+      "price": 22.53,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Perimeter",
+      "regionName": "The Forge",
+      "inventoryName": "Phased Plasma S"
+    },
+    "profit": 269602.56
+  },
+  "Proton S": {
+    "bestSell": {
+      "volume_remain": 1488,
+      "price": 5.99,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Deepari",
+      "regionName": "Domain",
+      "inventoryName": "Proton S"
+    },
+    "bestBuy": {
+      "volume_remain": 1822,
+      "price": 4.63,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Uitra",
+      "regionName": "The Forge",
+      "inventoryName": "Proton S"
+    },
+    "profit": -2023.6800000000012
+  },
+  "Scourge Light Missile": {
+    "bestSell": {
+      "volume_remain": 39457,
+      "price": 9.55,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Illuin",
+      "regionName": "Metropolis",
+      "inventoryName": "Scourge Light Missile"
+    },
+    "bestBuy": {
+      "volume_remain": 526720,
+      "price": 12.13,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Scourge Light Missile"
+    },
+    "profit": 101799.06
+  },
+  "Titanium Sabot S": {
+    "bestSell": {
+      "volume_remain": 14400,
+      "price": 6.5,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Dodixie",
+      "regionName": "Sinq Laison",
+      "inventoryName": "Titanium Sabot S"
+    },
+    "bestBuy": {
+      "volume_remain": 10000,
+      "price": 12.06,
+      "duration": 1,
+      "is_buy_order": true,
+      "systemName": "Uttindar",
+      "regionName": "Metropolis",
+      "inventoryName": "Titanium Sabot S"
+    },
+    "profit": 55600
+  },
+  "maxProfit": [
+    {
+      "maxProfit": 1246080,
+      "name": "Antimatter Charge L",
+      "buyInSystem": "Hodrold",
+      "sellInSystem": "Jita"
+    }
+  ]
+}
