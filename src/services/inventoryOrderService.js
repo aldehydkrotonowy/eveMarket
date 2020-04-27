@@ -15,7 +15,7 @@ export const inventoryOrdersService = ({
         regionId: region.id,
         inventoryId: inventory.id,
         orderType: orderType,
-        page: 0,
+        page: 1,
       };
 
       const preparedUrl = prepareUrl(urlSelector, data);
