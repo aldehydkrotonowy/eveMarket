@@ -6,16 +6,6 @@ const version = `latest`;
 const datasource = `datasource=tranquility`;
 const language = `language=en-us`;
 
-const promiseResult = async (promise) => {
-  const r = await promise.then(() => "a").catch(() => "b");
-  if (r === "a") {
-    console.log("a");
-  } else {
-    console.log("------b");
-  }
-  return r;
-};
-
 const regionsList = JSON.parse(fs.readFileSync("ALLRegionsList.json"));
 
 const regionIdList = regionsList.map(({ id }) => id);

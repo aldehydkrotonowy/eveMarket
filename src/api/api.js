@@ -10,7 +10,7 @@ export const url_selector = {
   OBJECT_CHARACTERISTICS: "objectCharacteristic",
   SYSTEMS_IDS_LIST: "systemsIdsList",
   REGIONS_IDS_LIST: "regionsIdsList",
-  CONSTELATIONS_IDS_LIST: "constelationsIdsList"
+  CONSTELATIONS_IDS_LIST: "constelationsIdsList",
 };
 
 const urlSelector = (what, param) => {
@@ -40,4 +40,45 @@ export const fetchData = async (selector, param) => {
   const url = urlSelector(selector, param);
   if (!url) return;
   return axios.get(url).then(({ data }) => data);
+};
+
+export const fetchDataRecursive = async (urlList, result) => {
+  let previousResults = [...result];
+
+  if (!urlList.length)
+    return await new Promise((resolve) => resolve(previousResults));
+
+  const prepareUrls = (urls) => {
+    const regionInfoPromises = [];
+    urls.forEach((url) => {
+      const promise = axios.get(url);
+      regionInfoPromises.push(
+        new Promise((resolve) => {
+          promise
+            .then(({ data }) => resolve({ success: true, data }))
+            .catch(() => resolve({ success: false, data: null, url }));
+        })
+      );
+    });
+    return regionInfoPromises;
+  };
+
+  const promises = prepareUrls(urlList);
+
+  return Promise.all(promises).then(async (values) => {
+    const badRequests = values.filter(({ success }) => !success);
+    const succesfulRequests = values.filter(({ success }) => success);
+
+    const faildUrls = badRequests.map(({ url }) => url);
+    previousResults = previousResults.concat(succesfulRequests);
+
+    console.log("raport", {
+      urlList: urlList.length,
+      succesfulRequests: succesfulRequests.length,
+      badRequests,
+      previousResults: previousResults.length,
+    });
+
+    return await fetchDataRecursive(faildUrls, previousResults);
+  });
 };

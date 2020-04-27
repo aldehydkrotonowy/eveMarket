@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Transactions from "./pages/Transactions";
 import Profits from "./pages/profits/Profits";
 import MarketSate from "./pages/marketState/MarketState";
+import CssPlayground from "./pages/cssPlayground/cssPlayground";
 import TabPanel from "./components/shared/TabPanel";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -58,7 +59,7 @@ function App() {
           <Tab label="BUY/SELL" icon={<FavoriteIcon />} {...a11yProps(1)} />
           <Tab label="PROFITS" icon={<PersonPinIcon />} {...a11yProps(2)} />
           <Tab label="MARKET STATE" icon={<HelpIcon />} {...a11yProps(3)} />
-          <Tab label="Item Five" icon={<ShoppingBasket />} {...a11yProps(4)} />
+          <Tab label="CSS" icon={<ShoppingBasket />} {...a11yProps(4)} />
           <Tab label="Item Six" icon={<ThumbDown />} {...a11yProps(5)} />
           <Tab label="Item Seven" icon={<ThumbUp />} {...a11yProps(6)} />
         </Tabs>
@@ -76,7 +77,7 @@ function App() {
         <MarketSate />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item Five
+        <CssPlayground />
       </TabPanel>
       <TabPanel value={value} index={5}>
         Item Six
