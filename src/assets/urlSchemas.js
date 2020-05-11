@@ -15,6 +15,7 @@ export const urlSchemas = {
       regionId: "__REGION_ID__",
     },
   },
+
   inventoryMarketDataUrl: {
     urlTemplate: `${ser_ver}/markets/__REGION_ID__/orders/?${datasource}&${orderType}=__ORDER_TYPE__&${page}=__PAGE__&${typeId}=__INVENTORY_ID__`,
     urlParts: {

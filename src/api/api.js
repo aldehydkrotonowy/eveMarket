@@ -42,7 +42,7 @@ export const fetchData = async (selector, param) => {
   return axios.get(url).then(({ data }) => data);
 };
 
-export const fetchDataRecursive = async (urlList, result) => {
+export const fetchDataRecursive = async (urlList, result = []) => {
   let previousResults = [...result];
 
   if (!urlList.length)
