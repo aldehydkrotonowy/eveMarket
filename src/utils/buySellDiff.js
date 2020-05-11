@@ -30,7 +30,7 @@ const sellBuyDiff = (itemList, marketOrders) =>
 
     const toInvest = smollerVolumeRemain * bestSell.price;
     const toEarn = smollerVolumeRemain * bestBuy.price;
-    const profit = round(toEarn - toInvest, 2);
+    const profit = round(toEarn - toInvest, 0);
 
     acc[name] = { bestSell, bestBuy, profit };
     return acc;
