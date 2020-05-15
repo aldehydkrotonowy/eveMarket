@@ -15,12 +15,16 @@ class MarketState extends React.Component {
   }
 
   handleRadioChange = async (event) => {
-    const { value } = event.currentTarget;
-    this.setState({ radioSelected: value });
-    const inventoryTypeList = newEdenInventoryList[value];
+    const { value: inventoryType } = event.currentTarget;
+    this.setState({ radioSelected: inventoryType });
+    const inventoryTypeList = newEdenInventoryList[inventoryType].list;
+
+    const config = {
+      profitAbove: 1000000,
+    };
 
     const filterBestProfit = (orderList) => (marketOrders) =>
-      buySellDiff(orderList, marketOrders);
+      buySellDiff(orderList, marketOrders, config);
 
     const params = {
       inventoryList: inventoryTypeList,
