@@ -3,21 +3,25 @@ import newEdenInventoryList from "../../assets/newEdenBaseData/inventory/newEden
 import RadioSection from "../../components/profits/radioSection/RadioSection";
 import inventoryOrderService from "../../services/inventoryOrderService";
 import buySellDiff from "../../utils/buySellDiff";
-
+import { arrayToChunks } from "../../utils/utils";
 class MarketState extends React.Component {
   state = {
     radioSelected: "",
   };
 
   componentDidMount() {
-    const radioItems = Object.keys(newEdenInventoryList).map((key) => key);
-    this.setState({ radioSectionItems: [radioItems] });
+    const elsInColumn = 5;
+    const itemsList = Object.keys(newEdenInventoryList);
+
+    const chunks = arrayToChunks(itemsList, elsInColumn);
+    this.setState({ radioSectionItems: chunks });
   }
 
   handleRadioChange = async (event) => {
     const { value: inventoryType } = event.currentTarget;
     this.setState({ radioSelected: inventoryType });
     const inventoryTypeList = newEdenInventoryList[inventoryType].list;
+    const inventoryVolume = newEdenInventoryList[inventoryType].itemVolume;
 
     const config = {
       profitAbove: 1000000,
@@ -34,11 +38,17 @@ class MarketState extends React.Component {
 
     const orders = await inventoryOrderService(params);
 
+    const rawMinerals = ["veldspar", "scordite", "omber"];
+    const shipVol = rawMinerals.includes(inventoryType) ? 46200 : 1057;
+
     const tableData = Object.entries(orders).map(([key, value]) => {
       const { bestBuy, bestSell, profit } = value;
 
       const row = {
         name: key,
+
+        shipVol: shipVol,
+        shipItemAmoutn: Math.floor(shipVol / inventoryVolume),
 
         sellSec: bestSell.securityStatus,
         sellSys: bestSell.systemName,
