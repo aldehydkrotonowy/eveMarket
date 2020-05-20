@@ -1,48 +1,59 @@
-const omber = [
-  // {
-  //   "category": "inventory_type",
-  //   "id": 28416,
-  //   "name": "Compressed Omber"
-  // },
-  // {
-  //   "category": "inventory_type",
-  //   "id": 28417,
-  //   "name": "Compressed Silvery Omber"
-  // },
+const omberFamily = [
   {
-    category: "inventory_type",
-    id: 17867,
-    name: "Silvery Omber",
-  },
-  // {
-  //   "category": "inventory_type",
-  //   "id": 46700,
-  //   "name": "Compressed Platinoid Omber"
-  // },
-  {
-    category: "inventory_type",
-    id: 1227,
-    name: "Omber",
+    id: 28415,
+    group_id: 0,
+    name: "Compressed Golden Omber",
+    description: "",
+    market_group_id: 526,
   },
   {
-    category: "inventory_type",
+    id: 28416,
+    group_id: 0,
+    name: "Compressed Omber",
+    description: "",
+    market_group_id: 526,
+  },
+  {
+    id: 46700,
+    group_id: 0,
+    name: "Compressed Platinoid Omber",
+    description: "",
+    market_group_id: 526,
+  },
+  {
+    id: 28417,
+    group_id: 0,
+    name: "Compressed Silvery Omber",
+    description: "",
+    market_group_id: 526,
+  },
+  {
     id: 17868,
+    group_id: 0,
     name: "Golden Omber",
+    description: "",
+    market_group_id: 526,
   },
-  // {
-  //   "category": "inventory_type",
-  //   "id": 28619,
-  //   "name": "Mercium"
-  // },
   {
-    category: "inventory_type",
-    id: 46684,
-    name: "Platinoid Omber",
+    id: 1227,
+    group_id: 0,
+    name: "Omber",
+    description: "",
+    market_group_id: 526,
   },
-  // {
-  //   "category": "inventory_type",
-  //   "id": 28415,
-  //   "name": "Compressed Golden Omber"
-  // }
+  {
+    id: 46684,
+    group_id: 0,
+    name: "Platinoid Omber",
+    description: "",
+    market_group_id: 526,
+  },
+  {
+    id: 17867,
+    group_id: 0,
+    name: "Silvery Omber",
+    description: "",
+    market_group_id: 526,
+  },
 ];
-export default omber;
+export default omberFamily;

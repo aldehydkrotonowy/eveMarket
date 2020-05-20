@@ -38,6 +38,22 @@ import factionChargesXL from "./parts/charges/faction/extraLarge";
 import veldspar from "./parts/materials/standardOres/veldspar";
 import scordite from "./parts/materials/standardOres/scordite";
 import omber from "./parts/materials/standardOres/omber";
+import spodumain from "./parts/materials/standardOres/spodumain";
+import talassonite from "./parts/materials/standardOres/talassonite";
+import rakovene from "./parts/materials/standardOres/rakovene";
+import pyroxeres from "./parts/materials/standardOres/pyroxeres";
+import plagioclase from "./parts/materials/standardOres/plagioclase";
+import merkoxite from "./parts/materials/standardOres/merkoxite";
+import kernite from "./parts/materials/standardOres/kernite";
+import jaspet from "./parts/materials/standardOres/jaspet";
+import hemorphite from "./parts/materials/standardOres/hemorphite";
+import hedbergite from "./parts/materials/standardOres/hedbergite";
+import gneiss from "./parts/materials/standardOres/gneiss";
+import darkOchre from "./parts/materials/standardOres/darkOchre";
+import crokite from "./parts/materials/standardOres/crokite";
+import bistot from "./parts/materials/standardOres/bistot";
+import bezdnazine from "./parts/materials/standardOres/bezdnazine";
+import arkonor from "./parts/materials/standardOres/arkonor";
 
 const inventoryList = {
   "faction hybrid charges S": {
@@ -175,6 +191,86 @@ const inventoryList = {
     profitThreshold: 0,
     itemVolume: 0.6,
     list: [...omber],
+  },
+  spodumain: {
+    profitThreshold: 0,
+    itemVolume: 16,
+    list: [...spodumain],
+  },
+  talassonite: {
+    profitThreshold: 0,
+    itemVolume: 16,
+    list: [...talassonite],
+  },
+  rakovene: {
+    profitThreshold: 0,
+    itemVolume: 16,
+    list: [...rakovene],
+  },
+  pyroxeres: {
+    profitThreshold: 0,
+    itemVolume: 0.3,
+    list: [...pyroxeres],
+  },
+  plagioclase: {
+    profitThreshold: 0,
+    itemVolume: 0.35,
+    list: [...plagioclase],
+  },
+  merkoxite: {
+    profitThreshold: 0,
+    itemVolume: 40,
+    list: [...merkoxite],
+  },
+  kernite: {
+    profitThreshold: 0,
+    itemVolume: 1.2,
+    list: [...kernite],
+  },
+  jaspet: {
+    profitThreshold: 0,
+    itemVolume: 2,
+    list: [...jaspet],
+  },
+  hemorphite: {
+    profitThreshold: 0,
+    itemVolume: 3,
+    list: [...hemorphite],
+  },
+  hedbergite: {
+    profitThreshold: 0,
+    itemVolume: 3,
+    list: [...hedbergite],
+  },
+  gneiss: {
+    profitThreshold: 0,
+    itemVolume: 5,
+    list: [...gneiss],
+  },
+  darkOchre: {
+    profitThreshold: 0,
+    itemVolume: 8,
+    list: [...darkOchre],
+  },
+  crokite: {
+    profitThreshold: 0,
+    itemVolume: 16,
+    list: [...crokite],
+  },
+  bistot: {
+    profitThreshold: 0,
+    itemVolume: 16,
+    list: [...bistot],
+  },
+  bezdnazine: {
+    profitThreshold: 0,
+    itemVolume: 16,
+    list: [...bezdnazine],
+  },
+  arkonor: {
+    profitThreshold: 0,
+    itemVolume: 16,
+    list: [...arkonor],
   },
 };
 
