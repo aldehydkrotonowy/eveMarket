@@ -55,53 +55,71 @@ import bistot from "./parts/materials/standardOres/bistot";
 import bezdnazine from "./parts/materials/standardOres/bezdnazine";
 import arkonor from "./parts/materials/standardOres/arkonor";
 
+import minerals from "./parts/materials/processed/minerals";
+
+import EMResistanceAmplifiers from "./parts/shipEquipment/shields/EMResistanceAmplifiers";
+import explosiveResistanceAmplifiers from "./parts/shipEquipment/shields/explosiveResistanceAmplifiers";
+import kineticResistanceAmplifiers from "./parts/shipEquipment/shields/kineticResistanceAmplifiers";
+import thermalResistanceAmplifiers from "./parts/shipEquipment/shields/thermalResistanceAmplifiers";
+import rechargers from "./parts/shipEquipment/shields/rechargers";
+
 const inventoryList = {
   "faction hybrid charges S": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.0025,
     list: [...factionChargesS],
   },
   "faction hybrid charges M": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.0125,
     list: [...factionChargesM],
   },
   "faction hybrid charges L": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.025,
     list: [...factionChargesL],
   },
   "faction hybrid charges XL": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.125,
     list: [...factionChargesXL],
   },
   "standard hybrid charges S": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.0025,
     list: [...standardChargesS],
   },
   "standard hybrid charges M": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.0125,
     list: [...standardChargesM],
   },
   "standard hybrid charges L": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.025,
     list: [...standardChargesL],
   },
   "standard hybrid charges XL": {
+    type: "item",
     profitThreshold: 1000000,
     itemVolume: 0.125,
     list: [...standardChargesXL],
   },
   "autotargeting missiles": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 0.05,
     list: [...standartAutotargetingMissiles, ...fractionAutoTargetingMissiles],
   },
   "cruise missile": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 0.05,
     list: [
@@ -112,62 +130,74 @@ const inventoryList = {
     ],
   },
   "specialized planet mat": {
+    type: "item planetary",
     profitThreshold: 0,
     itemVolume: 6,
     list: [...specializedPlanetaryMaterials],
   },
   "refined planet mat": {
+    type: "item planetary",
     profitThreshold: 0,
     itemVolume: 1.5,
     list: [...refinedPlanetaryMaterials],
   },
   "raw planet mat": {
+    type: "item planetary",
     profitThreshold: 0,
     itemVolume: 0.01,
     list: [...rawPlanetaryMaterials],
   },
   "processed planet mat": {
+    type: "item planetary",
     profitThreshold: 0,
     itemVolume: 0.38,
     list: [...processedPlanetaryMaterials],
   },
   "advanced planet mat": {
+    type: "item planetary",
     profitThreshold: 0,
     itemVolume: 100,
     list: [...advancedPlanetaryMaterials],
   },
   bombs: {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 75,
     list: [...bombs],
   },
   "standard Crystals": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 1,
     list: [...standardFrequencyCrystals],
   },
 
   "small faction crystals": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 1,
     list: [...smallFactionCrystals],
   },
   "medium faction crystals": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 1,
     list: [...mediumFactionCrystals],
   },
   "large faction crystals": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 1,
     list: [...largeFactionCrystals],
   },
   "extra large faction crystals": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 1,
     list: [...extraLargeFactionCrystals],
   },
   "adv puls laser cryst": {
+    type: "item",
     profitThreshold: 0,
     itemVolume: 1,
     list: [
@@ -178,99 +208,154 @@ const inventoryList = {
     ],
   },
   veldspar: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 0.1,
     list: [...veldspar],
   },
   scordite: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 0.15,
     list: [...scordite],
   },
   omber: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 0.6,
     list: [...omber],
   },
   spodumain: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 16,
     list: [...spodumain],
   },
   talassonite: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 16,
     list: [...talassonite],
   },
   rakovene: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 16,
     list: [...rakovene],
   },
   pyroxeres: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 0.3,
     list: [...pyroxeres],
   },
   plagioclase: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 0.35,
     list: [...plagioclase],
   },
   merkoxite: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 40,
     list: [...merkoxite],
   },
   kernite: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 1.2,
     list: [...kernite],
   },
   jaspet: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 2,
     list: [...jaspet],
   },
   hemorphite: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 3,
     list: [...hemorphite],
   },
   hedbergite: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 3,
     list: [...hedbergite],
   },
   gneiss: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 5,
     list: [...gneiss],
   },
   darkOchre: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 8,
     list: [...darkOchre],
   },
   crokite: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 16,
     list: [...crokite],
   },
   bistot: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 16,
     list: [...bistot],
   },
   bezdnazine: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 16,
     list: [...bezdnazine],
   },
   arkonor: {
+    type: "ore",
     profitThreshold: 0,
     itemVolume: 16,
     list: [...arkonor],
+  },
+  minerals: {
+    type: "mineral",
+    profitThreshold: 0,
+    itemVolume: 0.01,
+    list: [...minerals],
+  },
+  "EM shild resistance": {
+    type: "item",
+    profitThreshold: 0,
+    itemVolume: 1,
+    list: [...EMResistanceAmplifiers],
+  },
+  "kinetic shild resistance": {
+    type: "item",
+    profitThreshold: 0,
+    itemVolume: 1,
+    list: [...kineticResistanceAmplifiers],
+  },
+  "explosive shild resistance": {
+    type: "item",
+    profitThreshold: 0,
+    itemVolume: 1,
+    list: [...explosiveResistanceAmplifiers],
+  },
+  "thermal shild resistance": {
+    type: "item",
+    profitThreshold: 0,
+    itemVolume: 1,
+    list: [...thermalResistanceAmplifiers],
+  },
+  rechargers: {
+    type: "item",
+    profitThreshold: 0,
+    itemVolume: 1,
+    list: [...rechargers],
   },
 };
 

@@ -82,3 +82,12 @@ export const fetchDataRecursive = async (urlList, result = []) => {
     return await fetchDataRecursive(faildUrls, previousResults);
   });
 };
+
+export const fetchIdBasedOnName = (url, method, inventoryNameList) => {
+  const params = {
+    method,
+    url,
+    ...(method === "POST" && { data: [...inventoryNameList] }),
+  };
+  return axios({ params });
+};

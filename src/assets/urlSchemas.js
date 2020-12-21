@@ -11,18 +11,24 @@ const page = "page";
 export const urlSchemas = {
   regionsInfo: {
     urlTemplate: `${ser_ver}/universe/regions/__REGION_ID__/?${datasource}&${language}`,
+    requestType: "",
     urlParts: {
       regionId: "__REGION_ID__",
     },
   },
-
   inventoryMarketDataUrl: {
     urlTemplate: `${ser_ver}/markets/__REGION_ID__/orders/?${datasource}&${orderType}=__ORDER_TYPE__&${page}=__PAGE__&${typeId}=__INVENTORY_ID__`,
+    requestType: "GET",
     urlParts: {
       regionId: "__REGION_ID__",
       inventoryId: "__INVENTORY_ID__",
       orderType: "__ORDER_TYPE__",
       page: "__PAGE__",
     },
+  },
+  getSingleIdBasedOnNam: {
+    urlTemplate: `${ser_ver}/universe/ids/?${datasource}`,
+    requestType: "POST",
+    urlParts: null,
   },
 };

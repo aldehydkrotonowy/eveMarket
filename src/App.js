@@ -19,6 +19,7 @@ import HelpIcon from "@material-ui/icons/Help";
 import ShoppingBasket from "@material-ui/icons/ShoppingBasket";
 import ThumbDown from "@material-ui/icons/ThumbDown";
 import ThumbUp from "@material-ui/icons/ThumbUp";
+import RawToCompressedOres from "./pages/rawToCompressedOres/RawToCompressedOres";
 
 function a11yProps(index) {
   return {
@@ -60,7 +61,7 @@ function App() {
           <Tab label="PROFITS" icon={<PersonPinIcon />} {...a11yProps(2)} />
           <Tab label="MARKET STATE" icon={<HelpIcon />} {...a11yProps(3)} />
           <Tab label="CSS" icon={<ShoppingBasket />} {...a11yProps(4)} />
-          <Tab label="Item Six" icon={<ThumbDown />} {...a11yProps(5)} />
+          <Tab label="Raw Ores" icon={<ThumbDown />} {...a11yProps(5)} />
           <Tab label="Item Seven" icon={<ThumbUp />} {...a11yProps(6)} />
         </Tabs>
       </AppBar>
@@ -80,7 +81,7 @@ function App() {
         <CssPlayground />
       </TabPanel>
       <TabPanel value={value} index={5}>
-        Item Six
+        <RawToCompressedOres />
       </TabPanel>
       <TabPanel value={value} index={6}>
         Item Seven
