@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@material-ui/core/styles";
-import { inventoryOrdersService } from "../../services/inventoryOrderService";
-import chargesList from "../../assets/newEdenBaseData/inventory/chargesList.json";
+import inventoryOrdersService from "../../services/inventoryOrderService";
+// import chargesList from "../../assets/newEdenBaseData/inventory/chargesList";
 import safeRegions from "../../assets/newEdenBaseData/selectedManually/selectedRegionsList.json";
 import { fetchDataRecursive } from "../../api/api";
 import { isEmpty } from "lodash";
@@ -16,7 +16,7 @@ class CssPlayground extends React.Component {
   componentDidMount() {
     const sellChargesUrls = inventoryOrdersService({
       regionList: safeRegions,
-      inventoryList: chargesList,
+      // inventoryList: chargesList,
       orderType: "all",
     });
 

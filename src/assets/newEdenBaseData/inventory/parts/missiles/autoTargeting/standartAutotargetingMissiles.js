@@ -1,0 +1,88 @@
+const standartAutotargetingMissiles = [
+  {
+    id: 1832,
+    group_id: 0,
+    name: "Inferno Auto-Targeting Cruise Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1824,
+    group_id: 0,
+    name: "Inferno Auto-Targeting Heavy Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1816,
+    group_id: 0,
+    name: "Inferno Auto-Targeting Light Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1828,
+    group_id: 0,
+    name: "Mjolnir Auto-Targeting Cruise Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1820,
+    group_id: 0,
+    name: "Mjolnir Auto-Targeting Heavy Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 269,
+    group_id: 0,
+    name: "Mjolnir Auto-Targeting Light Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1830,
+    group_id: 0,
+    name: "Nova Auto-Targeting Cruise Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1822,
+    group_id: 0,
+    name: "Nova Auto-Targeting Heavy Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1814,
+    group_id: 0,
+    name: "Nova Auto-Targeting Light Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1826,
+    group_id: 0,
+    name: "Scourge Auto-Targeting Cruise Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1818,
+    group_id: 0,
+    name: "Scourge Auto-Targeting Heavy Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+  {
+    id: 1810,
+    group_id: 0,
+    name: "Scourge Auto-Targeting Light Missile I",
+    description: "",
+    market_group_id: 914,
+  },
+];
+
+export default standartAutotargetingMissiles;

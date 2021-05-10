@@ -1,0 +1,66 @@
+const processedMinerals = [
+  {
+    id: 48916,
+    group_id: 0,
+    name: "Cthonic Attar",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 37,
+    group_id: 0,
+    name: "Isogen",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 40,
+    group_id: 0,
+    name: "Megacyte",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 36,
+    group_id: 0,
+    name: "Mexallon",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 11399,
+    group_id: 0,
+    name: "Morphite",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 38,
+    group_id: 0,
+    name: "Nocxium",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 35,
+    group_id: 0,
+    name: "Pyerite",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 34,
+    group_id: 0,
+    name: "Tritanium",
+    description: "",
+    market_group_id: 1857,
+  },
+  {
+    id: 39,
+    group_id: 0,
+    name: "Zydrine",
+    description: "",
+    market_group_id: 1857,
+  },
+];
+export default processedMinerals;

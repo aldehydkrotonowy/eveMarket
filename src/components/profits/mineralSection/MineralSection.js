@@ -9,7 +9,8 @@ import React, { useEffect, useReducer } from "react";
 // import Paper from "@material-ui/core/Paper";
 import { isEmpty } from "lodash";
 import MaterialTable from "material-table";
-import { columns, icons } from "./columns";
+import { columns } from "./columns";
+import icons from "../../../components/shared/materialTableIcons";
 import {
   Section,
   Settings,
