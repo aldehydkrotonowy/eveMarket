@@ -1,0 +1,25 @@
+[
+  {
+    "systemId": 30000001,
+    "stationList": [
+      60012526,
+      60014437
+    ],
+    "stargatesList": [
+      50000056,
+      50000057,
+      50000058
+    ],
+    "securityStatus": 0.8583240509033203,
+    "systemName": "Tanoo",
+    "constelationId": 20000001,
+    "systemPosition": {
+      "x": -88510792599980580,
+      "y": 42369443966878880,
+      "z": -44513525346479660
+    },
+    "constelationName": "San Matar",
+    "regionId": 10000001,
+    "regionName": "Derelik"
+  }
+]

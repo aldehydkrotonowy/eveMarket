@@ -9,10 +9,10 @@ const version = `latest`;
 const datasource = `datasource=tranquility`;
 const language = `language=en-us`;
 
-const jsonRegionsList = JSON.parse(fs.readFileSync("regionsList.json"));
-const jsonItemsList = JSON.parse(fs.readFileSync("items.json"));
+const jsonRegionsList = JSON.parse(fs.readFileSync("selectedRegionsList.json"));
+const jsonItemsList = JSON.parse(fs.readFileSync("rawMinerals.json"));
 const jsonSafeSystemsList = JSON.parse(
-  fs.readFileSync("systemsSecAbove0.4.json")
+  fs.readFileSync("allWorldsInEve/filterSystemSecAbove04.js")
 );
 
 const orderTypeSell = "sell";
@@ -34,10 +34,8 @@ jsonRegionsList.forEach(({ id: regionId }) => {
 
 console.log({ numOfRequsts });
 
-console.time("all promises resolved in");
 Promise.all(sellOrdersPromise)
   .then((values) => {
-    console.timeEnd("all promises resolved in");
 
     const data = values
       .map(({ data }) => data)
@@ -91,16 +89,16 @@ Promise.all(sellOrdersPromise)
       const bestSell = sellAsc[0];
       const bestBuy = buyDesc[0];
 
-      const smollerVolumeRemain = Math.min(
+      const smallerVolumeRemain = Math.min(
         bestSell.volume_remain,
         bestBuy.volume_remain
       );
 
-      const toInvest = smollerVolumeRemain * bestSell.price;
-      const toEarn = smollerVolumeRemain * bestBuy.price;
+      const toInvest = smallerVolumeRemain * bestSell.price;
+      const toEarn = smallerVolumeRemain * bestBuy.price;
       const profit = toEarn - toInvest;
 
-      console.log({ smollerVolumeRemain, toInvest, toEarn, profit });
+      // console.log({ smallerVolumeRemain, toInvest, toEarn, profit });
 
       acc[name] = { bestSell, bestBuy, profit };
       return acc;
@@ -118,6 +116,6 @@ Promise.all(sellOrdersPromise)
     sellBuyDiff["maxProfit"] = maxProfit.filter(
       (offer) => offer.maxProfit > 600000
     );
-    fs.writeFileSync("itemOrders.json", JSON.stringify(sellBuyDiff));
+    fs.writeFileSync("mostProfitableRawMineralOffers.json", JSON.stringify(sellBuyDiff));
   })
   .catch((err) => console.log("not this time :("));

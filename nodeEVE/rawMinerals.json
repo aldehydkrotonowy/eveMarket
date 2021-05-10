@@ -1,0 +1,37 @@
+[
+  {
+    "id": 17455,
+    "maxPrice": 60,
+    "name": "Azure Plagioclase"
+  },
+  {
+    "id": 17463,
+    "maxPrice": 30,
+    "name": "Condensed Scordite"
+  },
+  {
+    "id": 17471,
+    "maxPrice": 22,
+    "name": "Dense Veldspar"
+  },
+  {
+    "id": 17453,
+    "maxPrice": 180,
+    "name": "Fiery Kernite"
+  },
+  {
+    "id": 17868,
+    "maxPrice": 65,
+    "name": "Golden Omber"
+  },
+  {
+    "id": 17449,
+    "maxPrice": 500,
+    "name": "Pristine Jaspet"
+  },
+  {
+    "id": 1224,
+    "maxPrice": 50,
+    "name": "Pyroxeres"
+  }
+]

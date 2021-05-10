@@ -24,7 +24,7 @@ const language = `language=en-us`;
 
 // console.log({ urls: initUrlList.length });
 
-const initUrlList = JSON.parse(fs.readFileSync("4.json"));
+const initUrlList = JSON.parse(fs.readFileSync("preparedUrlsForFetchSystemInfo-chunk-4.json"));
 
 const fetchData2 = async (urlList, result) => {
   let previousResults = [...result];
@@ -68,5 +68,5 @@ const fetchData2 = async (urlList, result) => {
 };
 
 fetchData2(initUrlList, []).then((data) => {
-  fs.writeFileSync("ALLSystemsInfo4.json", JSON.stringify(data));
+  fs.writeFileSync("ALLSystemsInfo-chunk-4.json", JSON.stringify(data));
 });

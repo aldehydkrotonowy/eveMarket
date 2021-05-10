@@ -9,7 +9,7 @@ const datasource = `datasource=tranquility`;
 const language = `language=en-us`;
 
 const jsonRegionsList = JSON.parse(fs.readFileSync("regionsList.json"));
-const jsonInventoryList = JSON.parse(fs.readFileSync("inventory.json"));
+const jsonInventoryList = JSON.parse(fs.readFileSync("rawMinerals.json"));
 const jsonSafeSystemsList = JSON.parse(
   fs.readFileSync("systemsSecAbove0.4.json")
 );
