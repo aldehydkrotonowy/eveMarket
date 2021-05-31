@@ -10,30 +10,14 @@ const language = `language=en-us`;
 
 const jsonRegionsList = JSON.parse(fs.readFileSync("./allWorldsInEve/ALLRegionsList.json"));
 const jsonAllSystemsInfoList = JSON.parse(fs.readFileSync("./allWorldsInEve/ALLSystemsInfo.json"));
+const normalVeldsparList = JSON.parse(fs.readFileSync("rawOres.json"))
 
 const orderType = "sell";
 const page = 1;
 
 const sellOrdersPromise = [];
 
-const rawOre = [
-  {
-    "id": 1230,
-    "name": "Veldspar"
-  },
-  {
-    "id": 17471,
-    "name": "Dense Veldspar"
-  },
-  {
-    "id": 17470,
-    "name": "Concentrated Veldspar"
-  },
-  {
-    "id": 46689,
-    "name": "Stable Veldspar"
-  }
-]
+const rawOre = normalVeldsparList.veldspar.normal;
 
 jsonRegionsList.forEach(({ id: regionId }) => {
   rawOre.forEach(({ id: oreId }) => {

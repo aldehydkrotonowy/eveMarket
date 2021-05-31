@@ -1,0 +1,40 @@
+{
+  "veldspar": {
+    "compressed": [
+      {
+        "id": 28432,
+        "name": "Compressed Veldspar"
+      },
+      {
+        "id": 28431,
+        "name": "Compressed Dense Veldspar"
+      },
+      {
+        "id": 28430,
+        "name": "Compressed Concentrated Veldspar"
+      },
+      {
+        "id": 46705,
+        "name": "Compressed Stable Veldspar"
+      }
+    ],
+    "normal": [
+      {
+        "id": 1230,
+        "name": "Veldspar"
+      },
+      {
+        "id": 17471,
+        "name": "Dense Veldspar"
+      },
+      {
+        "id": 17470,
+        "name": "Concentrated Veldspar"
+      },
+      {
+        "id": 46689,
+        "name": "Stable Veldspar"
+      }
+    ]
+  }
+}
