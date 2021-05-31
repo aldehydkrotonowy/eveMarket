@@ -12,7 +12,7 @@ const language = `language=en-us`;
 const jsonRegionsList = JSON.parse(fs.readFileSync("selectedRegionsList.json"));
 const jsonItemsList = JSON.parse(fs.readFileSync("rawMinerals.json"));
 const jsonSafeSystemsList = JSON.parse(
-  fs.readFileSync("allWorldsInEve/filterSystemSecAbove04.js")
+  fs.readFileSync("./allWorldsInEve/ALLSystemsSelectedProps.json")
 );
 
 const orderTypeSell = "sell";
@@ -41,12 +41,12 @@ Promise.all(sellOrdersPromise)
       .map(({ data }) => data)
       .filter((obj) => !isEmpty(obj))
       .reduce((acc, obj) => acc.concat(obj), []);
-
+    
     const withNamedSystems = data.map((order) => {
       const system = jsonSafeSystemsList.find(
         (sys) => sys.systemId === order.system_id
       );
-
+      
       const fieldsToPick = [
         "volume_remain",
         "price",
@@ -66,12 +66,12 @@ Promise.all(sellOrdersPromise)
     const removedNoNames = withNamedSystems.filter(
       (order) => order.systemName !== "not found"
     );
-
+    fs.writeFileSync("debug.json", JSON.stringify(withNamedSystems));
     const sellBuyDiff = jsonItemsList.reduce((acc, { name }) => {
       const dataForInventory = removedNoNames.filter(
         (item) => item.inventoryName === name
       );
-
+      
       const removeSmallVolume = dataForInventory.filter(
         (order) => order.volume_remain > 1000
       );
@@ -118,4 +118,4 @@ Promise.all(sellOrdersPromise)
     );
     fs.writeFileSync("mostProfitableRawMineralOffers.json", JSON.stringify(sellBuyDiff));
   })
-  .catch((err) => console.log("not this time :("));
+  .catch((err) => console.log("not this time :(", err));

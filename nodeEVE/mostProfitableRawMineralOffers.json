@@ -1,0 +1,163 @@
+{
+  "Azure Plagioclase": {
+    "bestSell": {
+      "volume_remain": 133459,
+      "price": 25.06,
+      "duration": 7,
+      "is_buy_order": false,
+      "systemName": "Geras",
+      "regionName": "The Forge",
+      "inventoryName": "Azure Plagioclase"
+    },
+    "bestBuy": {
+      "volume_remain": 260309,
+      "price": 54.92,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Ashab",
+      "regionName": "Domain",
+      "inventoryName": "Azure Plagioclase"
+    },
+    "profit": 3985085.74
+  },
+  "Condensed Scordite": {
+    "bestSell": {
+      "volume_remain": 39955,
+      "price": 10.56,
+      "duration": 1,
+      "is_buy_order": false,
+      "systemName": "Traun",
+      "regionName": "Metropolis",
+      "inventoryName": "Condensed Scordite"
+    },
+    "bestBuy": {
+      "volume_remain": 1102830,
+      "price": 21,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Finid",
+      "regionName": "Kador",
+      "inventoryName": "Condensed Scordite"
+    },
+    "profit": 417130.19999999995
+  },
+  "Dense Veldspar": {
+    "bestSell": {
+      "volume_remain": 18870,
+      "price": 10.5,
+      "duration": 1,
+      "is_buy_order": false,
+      "systemName": "Duripant",
+      "regionName": "Essence",
+      "inventoryName": "Dense Veldspar"
+    },
+    "bestBuy": {
+      "volume_remain": 2875093,
+      "price": 16,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Eugales",
+      "regionName": "Placid",
+      "inventoryName": "Dense Veldspar"
+    },
+    "profit": 103785
+  },
+  "Fiery Kernite": {
+    "bestSell": {
+      "volume_remain": 1179,
+      "price": 60,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Rens",
+      "regionName": "Heimatar",
+      "inventoryName": "Fiery Kernite"
+    },
+    "bestBuy": {
+      "volume_remain": 281479,
+      "price": 181.5,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Fiery Kernite"
+    },
+    "profit": 143248.5
+  },
+  "Golden Omber": {
+    "bestSell": {
+      "volume_remain": 6469,
+      "price": 45,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Nakregde",
+      "regionName": "Kor-Azor",
+      "inventoryName": "Golden Omber"
+    },
+    "bestBuy": {
+      "volume_remain": 481830,
+      "price": 108.3,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Golden Omber"
+    },
+    "profit": 409487.69999999995
+  },
+  "Pristine Jaspet": {
+    "bestSell": {
+      "volume_remain": 3078,
+      "price": 350,
+      "duration": 30,
+      "is_buy_order": false,
+      "systemName": "Ahbazon",
+      "regionName": "Genesis",
+      "inventoryName": "Pristine Jaspet"
+    },
+    "bestBuy": {
+      "volume_remain": 24842,
+      "price": 770.4,
+      "duration": 30,
+      "is_buy_order": true,
+      "systemName": "Jita",
+      "regionName": "The Forge",
+      "inventoryName": "Pristine Jaspet"
+    },
+    "profit": 1293991.1999999997
+  },
+  "Pyroxeres": {
+    "bestSell": {
+      "volume_remain": 4026,
+      "price": 30,
+      "duration": 90,
+      "is_buy_order": false,
+      "systemName": "Hek",
+      "regionName": "Metropolis",
+      "inventoryName": "Pyroxeres"
+    },
+    "bestBuy": {
+      "volume_remain": 3196708,
+      "price": 46.5,
+      "duration": 90,
+      "is_buy_order": true,
+      "systemName": "Irjunen",
+      "regionName": "The Citadel",
+      "inventoryName": "Pyroxeres"
+    },
+    "profit": 66429
+  },
+  "maxProfit": [
+    {
+      "maxProfit": 3985085.74,
+      "name": "Azure Plagioclase",
+      "buyInSystem": "Geras",
+      "sellInSystem": "Ashab"
+    },
+    {
+      "maxProfit": 1293991.1999999997,
+      "name": "Pristine Jaspet",
+      "buyInSystem": "Ahbazon",
+      "sellInSystem": "Jita"
+    }
+  ]
+}

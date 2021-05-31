@@ -8,10 +8,10 @@ const version = `latest`;
 const datasource = `datasource=tranquility`;
 const language = `language=en-us`;
 
-const jsonRegionsList = JSON.parse(fs.readFileSync("regionsList.json"));
+const jsonRegionsList = JSON.parse(fs.readFileSync("./allWorldsInEve/ALLRegionsList.json"));
 const jsonInventoryList = JSON.parse(fs.readFileSync("rawMinerals.json"));
 const jsonSafeSystemsList = JSON.parse(
-  fs.readFileSync("systemsSecAbove0.4.json")
+  fs.readFileSync("./allWorldsInEve/ALLSystemsSelectedProps.json")
 );
 
 const orderType = "sell";
@@ -57,7 +57,7 @@ Promise.all(sellOrdersPromise).then((values) => {
     const dataForInventory = removedNoNames.filter(
       (item) => item.inventoryName === name
     );
-
+      console.log('dd', dataForInventory)
     const removeSmallVolume = dataForInventory.filter(
       (order) => order.volume_remain > 1000
     );

@@ -131,7 +131,7 @@ class MarketState extends React.Component {
     };
 
     const orders = await inventoryOrderService(params);
-
+    console.log({orders});
     let shipVol = 0;
     switch (invenotryKind) {
       case "item":
